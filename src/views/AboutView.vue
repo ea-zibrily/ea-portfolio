@@ -12,7 +12,7 @@ export default {
         },
         {
           id: 2,
-          name: 'Unity Engine',
+          name: 'Unity',
           imageUrl: 'https://img.icons8.com/ios-filled/500/unity.png',
           status: 'Intermediate'
         },
