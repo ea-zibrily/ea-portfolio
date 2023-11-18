@@ -48,6 +48,15 @@ export default {
           tech: 'On Development | C#, Unity Engine',
           github: 'https://github.com/relaxwithus-dev/c-l-d-y',
           demo: 'null'
+        },
+        {
+          id: 6,
+          name: 'Monkey Arm',
+          imageUrl: 'monkeyarm',
+          status: 'Monkey Arm is an educational quiz game that aims to test and train players basic logical skills by using visual programming as the main mechanic.',
+          tech: 'On Development | C#, Unity Engine',
+          github: 'https://github.com/ea-zibrily/ekor-monyet',
+          demo: 'null'
         }
       ]
     };
