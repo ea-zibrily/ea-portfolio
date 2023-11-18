@@ -33,20 +33,20 @@ export default {
         },
         {
           id: 4,
-          name: 'C-L-D-Y',
-          imageUrl: 'cldy',
-          status: 'an typing-puzzle, adventure about the a man named Ego who is looking for his missing sister who accidentally touched a mysterious cloud that threw them into a cloud dimension named Cloudy.',
-          tech: 'On Development | C#, Unity Engine',
-          github: 'https://github.com/relaxwithus-dev/c-l-d-y',
-          demo: 'null'
-        },
-        {
-          id: 5,
           name: 'Ohh No My Egg!',
           imageUrl: 'egg',
           status: 'an online casual multiplayer game, about the fight between 2 ducks fighting over their eggs.',
           tech: 'Demo Release | C#, Unity Engine, Photon',
           github: 'https://github.com/ea-zibrily/ohh-no-my-egg',
+          demo: 'null'
+        },
+        {
+          id: 5,
+          name: 'C-L-D-Y',
+          imageUrl: 'cldy',
+          status: 'an typing-puzzle, adventure about the a man named Ego who is looking for his missing sister who accidentally touched a mysterious cloud that threw them into a cloud dimension named Cloudy.',
+          tech: 'On Development | C#, Unity Engine',
+          github: 'https://github.com/relaxwithus-dev/c-l-d-y',
           demo: 'null'
         }
       ]
