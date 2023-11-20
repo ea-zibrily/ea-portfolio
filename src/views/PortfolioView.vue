@@ -17,7 +17,7 @@ export default {
           id: 2,
           name: 'ELKER 2043',
           imageUrl: 'elker2043',
-          status: 'an Adventure game of a hacker named Ele who infiltrates a company building to reveal all the truth that exists. To fulfill his ambition, Ele must go secretly to find the correct data on there.',
+          status: 'an Adventure game about a hacker named Ele who infiltrates a company building to reveal all the truth that exists. To fulfill his ambition, Ele must go secretly to find the correct data there.',
           tech: 'Full Release | C#, Unity Engine',
           github: 'https://github.com/ea-zibrily/elker-2043',
           demo: 'https://tsukuyomi-std.itch.io/elker-2043'
@@ -44,7 +44,7 @@ export default {
           id: 5,
           name: 'C-L-D-Y',
           imageUrl: 'cldy',
-          status: 'an typing-puzzle, adventure about the a man named Ego who is looking for his missing sister who accidentally touched a mysterious cloud that threw them into a cloud dimension named Cloudy.',
+          status: 'an typing-puzzle, adventure game about a man named Ego who is looking for his missing sister who accidentally touched a mysterious cloud that threw them into a cloud dimension named Cloudy.',
           tech: 'On Development | C#, Unity Engine',
           github: 'https://github.com/relaxwithus-dev/c-l-d-y',
           demo: 'null'
