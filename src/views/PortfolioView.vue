@@ -81,18 +81,18 @@ export default {
           name: 'Tangkap Bintang',
           imageUrl: 'tangkap',
           status: 'Tangkap Bintang is an arcade filter game that requires players to capture stars.',
-          tech: 'On Development | JavaScript, Meta Spark AR',
+          tech: 'Release | JavaScript, Meta Spark AR',
           github: 'https://github.com/ea-zibrily/tangkap-bintang',
-          demo: 'null'
+          demo: 'https://www.instagram.com/iotakids/?hl=en'
         },
         {
           id: 10,
           name: 'Mendaki Puncak',
           imageUrl: 'mendaki',
           status: 'Mendaki Puncak is an arcade filter game that requires players to jump over platforms.',
-          tech: 'On Development | JavaScript, Meta Spark AR',
+          tech: 'Release | JavaScript, Meta Spark AR',
           github: 'https://github.com/ea-zibrily/mendaki-puncak',
-          demo: 'null'
+          demo: 'https://www.instagram.com/iotakids/?hl=en'
         },
         {
           id: 11,
@@ -110,7 +110,7 @@ export default {
           status: 'is a semi-rhythm game with a football theme.',
           tech: 'On Development | C#, Unity Engine',
           github: 'https://github.com/ea-zibrily/defense-mastery',
-          demo: 'null'
+          demo: 'https://tsukuyomi-std.itch.io/defend-mastery'
         }
       ]
     };
