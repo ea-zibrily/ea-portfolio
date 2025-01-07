@@ -45,7 +45,7 @@ export default {
           name: 'C-L-D-Y',
           imageUrl: 'cldy',
           status: 'an typing-puzzle, adventure game about a man named Ego who is looking for his missing sister who accidentally touched a mysterious cloud that threw them into a cloud dimension named Cloudy.',
-          tech: 'On Development | C#, Unity Engine',
+          tech: 'Postponed | C#, Unity Engine',
           github: 'https://github.com/relaxwithus-dev/c-l-d-y',
           demo: 'null'
         },
@@ -54,8 +54,62 @@ export default {
           name: 'Monkey Arm',
           imageUrl: 'monkeyarm',
           status: 'Monkey Arm is an educational quiz game that aims to test and train players basic logical skills by using visual programming as the main mechanic.',
-          tech: 'On Development | C#, Unity Engine',
+          tech: 'Handover | C#, Unity Engine',
           github: 'https://github.com/ea-zibrily/ekor-monyet',
+          demo: 'null'
+        },
+        {
+          id: 7,
+          name: 'Labirin Alfabet',
+          imageUrl: 'labirin',
+          status: 'an puzzle-adventure game about Devan and Rhea who is exploring various mazes to find the missing alphabet.',
+          tech: 'Full Release | C#, Unity Engine',
+          github: 'https://github.com/ea-zibrily/labirin-alfabet',
+          demo: 'https://play.google.com/store/apps/details?id=com.IOTA.IOTAKids&pcampaignid=web_share'
+        },
+        {
+          id: 8,
+          name: 'Skuadron Garuda',
+          imageUrl: 'garuda',
+          status: 'an action-shooter game about the adventures of the Garuda Force squad to defeat enemies and find gemstones in various parts of the world.',
+          tech: 'Alpha Testing | C#, Unity Engine',
+          github: 'https://github.com/ea-zibrily/skuadron-garuda',
+          demo: 'https://play.google.com/store/apps/details?id=com.IOTA.IOTAKids&pcampaignid=web_share'
+        },
+        {
+          id: 9,
+          name: 'Tangkap Bintang',
+          imageUrl: 'tangkap',
+          status: 'Tangkap Bintang is an arcade filter game that requires players to capture stars.',
+          tech: 'On Development | JavaScript, Meta Spark AR',
+          github: 'https://github.com/ea-zibrily/tangkap-bintang',
+          demo: 'null'
+        },
+        {
+          id: 10,
+          name: 'Mendaki Puncak',
+          imageUrl: 'mendaki',
+          status: 'Mendaki Puncak is an arcade filter game that requires players to jump over platforms.',
+          tech: 'On Development | JavaScript, Meta Spark AR',
+          github: 'https://github.com/ea-zibrily/mendaki-puncak',
+          demo: 'null'
+        },
+        {
+          id: 11,
+          name: 'TAKSA',
+          imageUrl: 'taksa',
+          status: 'Taksa is a visual novel educational game about Dhio life who is confused by hoaxes about his daughter treatment.',
+          tech: 'On Development | C#, Unity Engine',
+          github: 'null',
+          demo: 'null'
+        },
+        {
+          id: 12,
+          name: 'Defense Mastery',
+          imageUrl: 'defense',
+          status: 'is a semi-rhythm game with a football theme.',
+          tech: 'On Development | C#, Unity Engine',
+          github: 'https://github.com/ea-zibrily/defense-mastery',
           demo: 'null'
         }
       ]

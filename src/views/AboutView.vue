@@ -12,18 +12,24 @@ export default {
         },
         {
           id: 2,
+          name: 'JavaScript',
+          imageUrl: 'https://static.cdnlogo.com/logos/j/44/javascript.svg',
+          status: 'Beginner'
+        },
+        {
+          id: 3,
           name: 'Unity',
           imageUrl: 'https://img.icons8.com/ios-filled/500/unity.png',
           status: 'Intermediate'
         },
         {
-          id: 3,
+          id: 4,
           name: 'Git',
           imageUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
           status: 'Version Control'
         },
         {
-          id: 4,
+          id: 5,
           name: 'GitHub',
           imageUrl: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
           status: 'Git Hosting'
