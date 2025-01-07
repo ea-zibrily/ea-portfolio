@@ -81,7 +81,7 @@ export default {
           name: 'Tangkap Bintang',
           imageUrl: 'tangkap',
           status: 'Tangkap Bintang is an arcade filter game that requires players to capture stars.',
-          tech: 'Release | JavaScript, Meta Spark AR',
+          tech: 'Full Release | JavaScript, Meta Spark AR',
           github: 'https://github.com/ea-zibrily/tangkap-bintang',
           demo: 'https://www.instagram.com/iotakids/?hl=en'
         },
@@ -90,7 +90,7 @@ export default {
           name: 'Mendaki Puncak',
           imageUrl: 'mendaki',
           status: 'Mendaki Puncak is an arcade filter game that requires players to jump over platforms.',
-          tech: 'Release | JavaScript, Meta Spark AR',
+          tech: 'Full Release | JavaScript, Meta Spark AR',
           github: 'https://github.com/ea-zibrily/mendaki-puncak',
           demo: 'https://www.instagram.com/iotakids/?hl=en'
         },
