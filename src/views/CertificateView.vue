@@ -21,6 +21,15 @@ export default {
           tech: 'Issued Jun 2023',
           github: 'null',
           demo: 'https://codingstudio.id/certificate/75AF238A1C-75A99878E2-75A3383BC5/'
+        },
+        {
+          id: 3,
+          name: 'Belajar Prinsip SOLID Programming',
+          imageUrl: 'solid',
+          status: 'Dicoding',
+          tech: 'Issued Jan 2025 - Jan 2028',
+          github: 'null',
+          demo: 'https://www.dicoding.com/certificates/EYX4G2YOWZDL'
         }
       ]
     };
