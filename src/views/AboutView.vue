@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      activeTab: 2,
+      activeTab: 1,
       tech: [
         {
           id: 1,
