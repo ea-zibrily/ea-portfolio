@@ -111,6 +111,15 @@ export default {
           tech: 'On Development | C#, Unity Engine',
           github: 'https://github.com/ea-zibrily/defense-mastery',
           demo: 'https://tsukuyomi-std.itch.io/defend-mastery'
+        },
+        {
+          id: 13,
+          name: 'Ghost Breaker: Suri Adventure',
+          imageUrl: 'ghost',
+          status: 'an a block-breaker game with a Ghost Parade IP by Lentera Nusantara.',
+          tech: 'Release - Runtime Development | C#, Unity Engine',
+          github: 'null',
+          demo: 'https://play.google.com/store/apps/details?id=com.LenteraNusantara.GhostBreaker&pcampaignid=web_share'
         }
       ]
     };

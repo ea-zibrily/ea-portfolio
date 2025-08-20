@@ -30,6 +30,33 @@ export default {
           tech: 'Issued Jan 2025 - Jan 2028',
           github: 'null',
           demo: 'https://www.dicoding.com/certificates/EYX4G2YOWZDL'
+        },
+        {
+          id: 4,
+          name: 'Live2Dev Gamejam 2025',
+          imageUrl: 'live2dev',
+          status: 'IGGI',
+          tech: 'Issued Aug 2025',
+          github: 'null',
+          demo: 'null'
+        },
+        {
+          id: 5,
+          name: 'Sertikom BNSP - Lead 3D Animator',
+          imageUrl: 'sertikom',
+          status: 'BNSP',
+          tech: 'Issued Nov 2024 - Nov 2027',
+          github: 'null',
+          demo: 'null'
+        },
+        {
+          id: 6,
+          name: 'PENS English Proficiency Test',
+          imageUrl: 'pept',
+          status: 'PENS',
+          tech: 'Issued Apr 2025 - Apr 2027',
+          github: 'null',
+          demo: 'null'
         }
       ]
     };

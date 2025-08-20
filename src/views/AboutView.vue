@@ -42,33 +42,45 @@ export default {
         },
         {
           id: 7,
+          name: 'Figma',
+          imageUrl: 'https://static.cdnlogo.com/logos/f/54/figma.svg',
+          status: 'Beginner'
+        },
+        {
+          id: 8,
           name: 'Git',
           imageUrl: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png',
           status: 'Version Control'
         },
         {
-          id: 8,
+          id: 9,
           name: 'GitHub',
           imageUrl: 'https://skillicons.dev/icons?i=github',
           status: 'Git Hosting'
         },
         {
-          id: 9,
+          id: 10,
           name: 'GitLab',
           imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg',
           status: 'Git Hosting'
         },
         {
-          id: 10,
+          id: 11,
           name: 'Source Tree',
           imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sourcetree/sourcetree-original.svg',
           status: 'Git Hosting'
         },
         {
-          id: 11,
+          id: 12,
           name: 'NPM',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-npm-3-1175132.png',
           status: 'Package Manager'
+        },
+        {
+          id: 13,
+          name: 'Docker',
+          imageUrl: 'https://static.cdnlogo.com/logos/d/41/docker.svg',
+          status: 'Containerization'
         }
       ],
       tools: [
@@ -122,14 +134,14 @@ export default {
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1">
-            &nbsp; &nbsp; &nbsp; Hi everyone! My name is Zibril Yuan Afrianto. I am a 5th semester student majoring in 
+            &nbsp; &nbsp; &nbsp; Hi everyone! My name is Zibril Yuan Afrianto. I am a fresh graduate majoring in 
             Game Technology from Politeknik Elektronika Negeri Surabaya. I have an interest in Game Development and my 
             expertise focuses on Unity Game Programming. My job is to implement various mechanics and systems designed 
             by game designers and ensure that the game's core-loop runs smoothly.
           </p>
           <p class="mb-3 fadein-left fadeins-2">
-            &nbsp; &nbsp; &nbsp; With 2 years of experience in Unity Game Programming, I have worked on several game 
-            development projects, ranging from coursework projects to personal projects. 
+            &nbsp; &nbsp; &nbsp; With 3+ years of experience in Unity Game Programming, I have worked on several game 
+            development projects, ranging from personal projects to studio projects. 
             I enjoy what I am currently pursuing, because I think developing a game is exciting, cool and challenging.
           </p>
         </div>
