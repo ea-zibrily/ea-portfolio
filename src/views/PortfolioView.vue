@@ -116,10 +116,19 @@ export default {
           id: 13,
           name: 'Ghost Breaker: Suri Adventure',
           imageUrl: 'ghost',
-          status: 'an a block-breaker game with a Ghost Parade IP by Lentera Nusantara.',
-          tech: 'Release - Runtime Development | C#, Unity Engine',
+          status: 'an a block-breaker game with a ghost theme and dark joke twist.',
+          tech: 'Runtime Development | C#, Unity Engine',
           github: 'null',
           demo: 'https://play.google.com/store/apps/details?id=com.LenteraNusantara.GhostBreaker&pcampaignid=web_share'
+        },
+        {
+          id: 14,
+          name: 'Ghost Pinball: Tuyul Adventure',
+          imageUrl: 'tuyul',
+          status: 'an a pinball adventure about tuyul versus the sneaky boar gank.',
+          tech: 'Release | C#, Unity Engine',
+          github: 'null',
+          demo: 'https://play.google.com/store/apps/details?id=com.LenteraNusantara.TuyulMantul&pcampaignid=web_share'
         }
       ]
     };
