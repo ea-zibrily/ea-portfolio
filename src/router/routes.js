@@ -10,20 +10,14 @@ export default [
   },
   {
     path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue'),
-    meta: { title: 'About' }
+    redirect: '/#about'
   },
   {
     path: '/portfolio',
-    name: 'portfolio',
-    component: () => import('../views/PortfolioView.vue'),
-    meta: { title: 'Portfolio' }
+    redirect: '/#portfolio'
   },
   {
     path: '/certificate',
-    name: 'certificate',
-    component: () => import('../views/CertificateView.vue'),
-    meta: { title: 'Certificate' }
+    redirect: '/#certificates'
   }
 ]

@@ -1,29 +1,30 @@
 /* src/styles/tokens.css */
 :root {
-  --bg: #0b0c10;
-  --surface: #1e1e1f;
-  --surface-hover: #282828;
-  --border: #383838;
-  --text: #e8edff;
-  --text-muted: #9aa6cc;
-  --primary: #ffdb70;
-  --primary-fg: #121212;
-  --accent: #fcd34d;
-  --tag-bg: #2a2a2c;
+  --bg: #F7F9FF;
+  --surface: #FFFFFF;
+  --surface-hover: #EEF2FF;
+  --border: #DCE3F5;
+  --text: #0B1530;
+  --text-muted: #4A5578;
+  --primary: #2747D6;
+  --primary-fg: #FFFFFF;
+  --accent: #7C5CFF;
+  --tag-bg: #E6ECFF;
   --nav-h: 4.5rem;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 .dark {
-  --bg: #070b1a;
-  --surface: #0e1530;
-  --surface-hover: #16204a;
-  --border: #1f2a55;
-  --text: #e8edff;
-  --text-muted: #9aa6cc;
-  --primary: #6b8bff;
-  --primary-fg: #070b1a;
-  --accent: #9d86ff;
-  --tag-bg: #1a2558;
+  --bg: #070B1A;
+  --surface: #0E1530;
+  --surface-hover: #16204A;
+  --border: #1F2A55;
+  --text: #E8EDFF;
+  --text-muted: #9AA6CC;
+  --primary: #6B8BFF;
+  --primary-fg: #070B1A;
+  --accent: #9D86FF;
+  --tag-bg: #1A2558;
+  --nav-h: 4.5rem;
   color-scheme: dark;
 }
