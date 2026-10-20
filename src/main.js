@@ -1,8 +1,21 @@
-import { createApp } from 'vue'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import router from './router'
-import './assets/tailwind.css'
+import routes from './router/routes.js'
+import scrollBehavior from './router/scroll-behavior.js'
+import './styles/main.css'
 
-createApp(App).use(router).mount('#app')
-
-
+export const createApp = ViteSSG(
+  App,
+  {
+    routes,
+    scrollBehavior
+  },
+  ({ router, isClient }) => {
+    if (isClient) {
+      router.beforeEach((to, from, next) => {
+        document.title = (to.meta.title ? `${to.meta.title} — ` : '') + 'Zibril Yuan Afrianto'
+        next()
+      })
+    }
+  }
+)
