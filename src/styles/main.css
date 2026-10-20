@@ -39,6 +39,11 @@ body {
   min-height: 100vh;
 }
 
+/* Ensure main content is offset by the fixed navbar height */
+main.app-main {
+  padding-top: var(--nav-h);
+}
+
 /* Sections offset for sticky navbar */
 section[id] {
   scroll-margin-top: var(--nav-h);

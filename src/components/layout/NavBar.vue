@@ -30,7 +30,7 @@ function handleBrandClick() {
 
 function onScroll() {
   if (typeof window !== 'undefined') {
-    isScrolled.value = window.scrollY > 30
+    isScrolled.value = window.scrollY > 20
   }
 }
 
@@ -50,10 +50,11 @@ onBeforeUnmount(() => {
 
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-50 h-[var(--nav-h)] transition-all duration-300 flex items-center"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex items-center"
+    style="height: var(--nav-h);"
     :class="{
       'bg-surface/85 backdrop-blur-md border-b border-border shadow-xs': isScrolled,
-      'bg-transparent': !isScrolled
+      'bg-surface/50 backdrop-blur-sm': !isScrolled
     }"
   >
     <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 flex items-center justify-between">

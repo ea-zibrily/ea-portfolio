@@ -7,7 +7,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
 <template>
   <div class="min-h-screen flex flex-col bg-bg text-text">
     <NavBar />
-    <main class="flex-1 pt-var(--nav-h)">
+    <main class="app-main flex-1">
       <router-view />
     </main>
     <SiteFooter />
