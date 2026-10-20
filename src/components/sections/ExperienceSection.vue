@@ -1,5 +1,6 @@
 <script setup>
 import experience from '@/content/experience.js'
+import ExperienceItem from '@/components/sections/ExperienceItem.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
 </script>
 
@@ -10,34 +11,30 @@ import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
     class="scroll-mt-[var(--nav-h)] py-12 px-4 md:px-8 text-left"
   >
     <RevealOnScroll>
-      <header>
-        <div class="text-2xl font-bold text-text mb-2 flex items-center gap-3">
-          <h2 id="experience-heading">Work Experience</h2>
-          <div class="h-[2px] w-24 md:w-48 bg-primary/60 rounded-full"></div>
-        </div>
-        <p class="text-text-muted text-sm md:text-base mb-8">
-          My professional journey and game development milestones.
+      <header class="text-center mb-12">
+        <h2 id="experience-heading" class="text-2xl sm:text-3xl font-bold text-text mb-2">
+          Work Experience
+        </h2>
+        <p class="text-text-muted text-sm md:text-base">
+          My professional journey, game studio roles, and development milestones.
         </p>
       </header>
 
-      <!-- If experience data exists -->
-      <div v-if="experience && experience.length > 0" class="relative border-l-2 border-border ml-4 pl-6 space-y-8">
-        <div v-for="job in experience" :key="job.id" class="relative group">
-          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-bg"></div>
-          <div class="bg-surface p-5 rounded-xl border border-border">
-            <span class="text-xs font-semibold text-primary tracking-wider uppercase">{{ job.period }}</span>
-            <h3 class="text-lg font-bold text-text mt-1">{{ job.role }}</h3>
-            <p class="text-sm text-text-muted font-medium">{{ job.company }}</p>
-            <p class="text-sm text-text-muted mt-2">{{ job.summary }}</p>
-          </div>
+      <!-- Vertical Timeline (left-aligned, mobile responsive) -->
+      <div class="max-w-3xl mx-auto pl-2 sm:pl-4">
+        <div v-if="experience && experience.length > 0">
+          <ExperienceItem
+            v-for="job in experience"
+            :key="job.id"
+            :item="job"
+          />
         </div>
-      </div>
 
-      <!-- Placeholder until Phase 3 -->
-      <div v-else class="p-8 rounded-2xl border border-dashed border-border text-center bg-surface/50">
-        <p class="text-text-muted text-sm md:text-base">
-          💼 Professional experience timeline being prepared for Phase 3.
-        </p>
+        <div v-else class="p-8 rounded-2xl border border-dashed border-border text-center bg-surface/50">
+          <p class="text-text-muted text-sm md:text-base">
+            No work experience records found.
+          </p>
+        </div>
       </div>
     </RevealOnScroll>
   </section>

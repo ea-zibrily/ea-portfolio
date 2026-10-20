@@ -1,13 +1,32 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import sections from '@/content/sections.js'
 import profile from '@/content/profile.js'
 import CvButton from '@/components/ui/CvButton.vue'
 import ThemeToggle from '@/components/layout/ThemeToggle.vue'
 import { useScrollSpy } from '@/composables/useScrollSpy.js'
 
+const route = useRoute()
+const router = useRouter()
 const { activeId, scrollTo } = useScrollSpy()
 const isScrolled = ref(false)
+
+function handleNavClick(sectionId) {
+  if (route.path === '/') {
+    scrollTo(sectionId)
+  } else {
+    router.push({ path: '/', hash: '#' + sectionId })
+  }
+}
+
+function handleBrandClick() {
+  if (route.path === '/') {
+    scrollTo('home')
+  } else {
+    router.push('/')
+  }
+}
 
 function onScroll() {
   if (typeof window !== 'undefined') {
@@ -40,9 +59,9 @@ onBeforeUnmount(() => {
     <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 flex items-center justify-between">
       <!-- Brand Logo -->
       <button
-        @click="scrollTo('home')"
+        @click="handleBrandClick"
         class="flex items-center gap-2 cursor-pointer bg-transparent border-0 group"
-        aria-label="Return to top"
+        aria-label="Return to home top"
       >
         <span class="text-lg font-bold text-primary group-hover:opacity-85 transition-opacity">
           Zibril Portfolio
@@ -54,17 +73,17 @@ onBeforeUnmount(() => {
         <button
           v-for="section in sections"
           :key="section.id"
-          @click="scrollTo(section.id)"
+          @click="handleNavClick(section.id)"
           class="relative text-sm font-medium transition-colors py-1 cursor-pointer bg-transparent border-0"
           :class="{
-            'text-primary font-semibold': activeId === section.id,
-            'text-text-muted hover:text-text': activeId !== section.id
+            'text-primary font-semibold': route.path === '/' && activeId === section.id,
+            'text-text-muted hover:text-text': route.path !== '/' || activeId !== section.id
           }"
-          :aria-current="activeId === section.id ? 'page' : undefined"
+          :aria-current="route.path === '/' && activeId === section.id ? 'page' : undefined"
         >
           {{ section.label }}
           <span
-            v-if="activeId === section.id"
+            v-if="route.path === '/' && activeId === section.id"
             class="absolute bottom-0 left-0 right-0 h-[2px] bg-primary rounded-full"
           ></span>
         </button>

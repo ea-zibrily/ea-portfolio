@@ -1,8 +1,19 @@
 <script setup>
+import { useRoute, useRouter } from 'vue-router'
 import sections from '@/content/sections.js'
 import { useScrollSpy } from '@/composables/useScrollSpy.js'
 
+const route = useRoute()
+const router = useRouter()
 const { activeId, scrollTo } = useScrollSpy()
+
+function handleNavClick(sectionId) {
+  if (route.path === '/') {
+    scrollTo(sectionId)
+  } else {
+    router.push({ path: '/', hash: '#' + sectionId })
+  }
+}
 </script>
 
 <template>
@@ -14,17 +25,17 @@ const { activeId, scrollTo } = useScrollSpy()
       <button
         v-for="section in sections"
         :key="section.id"
-        @click="scrollTo(section.id)"
+        @click="handleNavClick(section.id)"
         class="flex flex-col items-center gap-1 text-[11px] font-medium transition-colors cursor-pointer bg-transparent border-0 px-2 py-1"
         :class="{
-          'text-primary font-bold': activeId === section.id,
-          'text-text-muted hover:text-text': activeId !== section.id
+          'text-primary font-bold': route.path === '/' && activeId === section.id,
+          'text-text-muted hover:text-text': route.path !== '/' || activeId !== section.id
         }"
-        :aria-current="activeId === section.id ? 'page' : undefined"
+        :aria-current="route.path === '/' && activeId === section.id ? 'page' : undefined"
       >
         <span>{{ section.label }}</span>
         <span
-          v-if="activeId === section.id"
+          v-if="route.path === '/' && activeId === section.id"
           class="w-1.5 h-1.5 rounded-full bg-primary"
         ></span>
         <span v-else class="w-1.5 h-1.5"></span>
