@@ -9,6 +9,11 @@ export default [
     meta: { title: 'Home' }
   },
   {
+    path: '/project/:slug',
+    name: 'project',
+    component: () => import('../views/ProjectDetailView.vue')
+  },
+  {
     path: '/about',
     redirect: '/#about'
   },
@@ -19,5 +24,14 @@ export default [
   {
     path: '/certificate',
     redirect: '/#certificates'
+  },
+  {
+    path: '/404',
+    name: 'not-found',
+    component: () => import('../views/NotFoundView.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('../views/NotFoundView.vue')
   }
 ]

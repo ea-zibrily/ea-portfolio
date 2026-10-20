@@ -5,8 +5,17 @@ export default function scrollBehavior(to, from, savedPosition) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   const behavior = reduce ? 'auto' : 'smooth'
 
-  if (savedPosition) return savedPosition
-  if (to.hash) return { el: to.hash, behavior }
-  if (to.name === 'project') return { top: 0 }
+  if (savedPosition) {
+    return savedPosition
+  }
+
+  if (to.hash) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ el: to.hash, behavior })
+      }, 60)
+    })
+  }
+
   return { top: 0 }
 }
