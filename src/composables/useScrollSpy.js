@@ -89,6 +89,11 @@ export function useScrollSpy(sectionIds = sections.map((s) => s.id)) {
             target.scrollIntoView({ behavior: 'auto' })
           }
         }, 50)
+      } else if (hashId.startsWith('project-')) {
+        activeId.value = 'portfolio'
+        isLocked.value = true
+        clearTimeout(lockTimer)
+        lockTimer = setTimeout(unlock, 1200)
       }
     }
   })

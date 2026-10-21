@@ -92,7 +92,7 @@ function getDemoLink(project) {
           >
             <ItemCard
               :id="'project-' + item.slug"
-              class="group-hover:border-primary/50 group-hover:shadow-lg transition-all duration-300"
+              class="scroll-mt-[calc(var(--nav-h)+1.5rem)] group-hover:border-primary/50 group-hover:shadow-lg transition-all duration-300"
             >
               <template #image>
                 <div class="relative w-full overflow-hidden rounded-lg">

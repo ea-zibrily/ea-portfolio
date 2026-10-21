@@ -12,11 +12,8 @@ const props = defineProps({
 const router = useRouter()
 
 function handleBack() {
-  if (typeof window !== 'undefined' && window.history.state?.back?.startsWith('/')) {
-    router.back()
-  } else {
-    router.push({ path: '/', hash: '#portfolio' })
-  }
+  const hash = props.project?.slug ? `#project-${props.project.slug}` : '#portfolio'
+  router.push({ path: '/', hash })
 }
 </script>
 
