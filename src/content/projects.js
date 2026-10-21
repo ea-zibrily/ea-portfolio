@@ -139,7 +139,7 @@ export default [
   {
     slug: 'monkey-arm',
     title: 'Monkey Arm',
-    category: 'Educational Project',
+    category: 'Freelance Project',
     role: 'Unity Programmer',
     status: 'Handover',
     period: '2023',
@@ -274,7 +274,7 @@ export default [
   {
     slug: 'taksa',
     title: 'TAKSA',
-    category: 'Educational Project',
+    category: 'Freelance Project',
     role: 'Unity Programmer',
     status: 'On Development',
     period: '2024',

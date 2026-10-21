@@ -1,8 +1,37 @@
 <script setup>
+import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import projects from '@/content/projects.js'
 import ItemCard from '@/components/ui/ItemCard.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
+
+const categories = [
+  { id: 'all', label: 'All' },
+  { id: 'professional', label: 'Professional Project' },
+  { id: 'freelance', label: 'Freelance Project' },
+  { id: 'gamejam', label: 'Game Jam Project' },
+  { id: 'personal', label: 'Personal Project' }
+]
+
+const activeCategory = ref('all')
+
+function matchesCategory(project, catId) {
+  if (catId === 'all') return true
+  const cat = (project.category || '').toLowerCase()
+  if (catId === 'professional') return cat.includes('professional')
+  if (catId === 'freelance') return cat.includes('freelance') || cat.includes('educational') || cat.includes('school')
+  if (catId === 'gamejam') return cat.includes('game jam') || cat.includes('gamejam')
+  if (catId === 'personal') return cat.includes('personal')
+  return false
+}
+
+const filteredProjects = computed(() => {
+  return projects.filter(p => matchesCategory(p, activeCategory.value))
+})
+
+function getCategoryCount(catId) {
+  return projects.filter(p => matchesCategory(p, catId)).length
+}
 
 function getDemoLink(project) {
   return project.links?.playStore || project.links?.itch || project.links?.instagram || null
@@ -13,26 +42,58 @@ function getDemoLink(project) {
   <section
     id="portfolio"
     aria-labelledby="portfolio-heading"
-    class="scroll-mt-[var(--nav-h)] py-12 px-4 md:px-8 text-left"
+    class="scroll-mt-[var(--nav-h)] py-12 px-4 md:px-8 text-left max-w-7xl mx-auto"
   >
     <RevealOnScroll>
-      <header class="text-center mb-10">
+      <header class="text-center mb-8">
         <h2 id="portfolio-heading" class="text-2xl sm:text-3xl font-bold text-text mb-2">
           Featured Projects & Works
         </h2>
-        <p class="text-text-muted text-sm md:text-base">
+        <p class="text-text-muted text-sm md:text-base max-w-2xl mx-auto">
           Explore the games and interactive experiences I've engineered. Click any project to read engineering details.
         </p>
       </header>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div v-for="item in projects" :key="item.slug">
+      <!-- Horizontal Grouping / Filter Buttons -->
+      <div
+        role="tablist"
+        aria-label="Filter projects by category"
+        class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-10"
+      >
+        <button
+          v-for="cat in categories"
+          :key="cat.id"
+          type="button"
+          role="tab"
+          :aria-selected="activeCategory === cat.id"
+          @click="activeCategory = cat.id"
+          :class="[
+            'px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer select-none',
+            activeCategory === cat.id
+              ? 'bg-primary text-primary-fg font-semibold shadow-xs'
+              : 'bg-surface hover:bg-surface-hover text-text-muted hover:text-text border border-border'
+          ]"
+        >
+          <span>{{ cat.label }}</span>
+          <span class="ml-1.5 opacity-90">({{ getCategoryCount(cat.id) }})</span>
+        </button>
+      </div>
+
+      <!-- Project Grid -->
+      <div
+        v-if="filteredProjects.length > 0"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <div v-for="item in filteredProjects" :key="item.slug">
           <RouterLink
             :to="'/project/' + item.slug"
             class="block group focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
             :aria-label="`View details for ${item.title}`"
           >
-            <ItemCard :id="'project-' + item.slug">
+            <ItemCard
+              :id="'project-' + item.slug"
+              class="group-hover:border-primary/50 group-hover:shadow-lg transition-all duration-300"
+            >
               <template #image>
                 <div class="relative w-full overflow-hidden rounded-lg">
                   <img
@@ -52,16 +113,10 @@ function getDemoLink(project) {
                   <span>{{ item.period || '2023' }}</span>
                 </div>
 
-                <div class="flex items-center justify-between gap-2">
+                <div>
                   <h3 class="text-lg font-bold text-text tracking-tight group-hover:text-primary transition-colors">
                     {{ item.title }}
                   </h3>
-                  <span class="text-primary text-xs shrink-0 flex items-center gap-0.5 group-hover:translate-x-1 transition-transform">
-                    <span>Details</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                  </span>
                 </div>
 
                 <p class="text-xs sm:text-sm text-text-muted line-clamp-3">
@@ -137,6 +192,13 @@ function getDemoLink(project) {
             </ItemCard>
           </RouterLink>
         </div>
+      </div>
+
+      <div
+        v-else
+        class="text-center py-16 px-4 rounded-2xl bg-surface border border-border"
+      >
+        <p class="text-text-muted">No projects found in this category.</p>
       </div>
     </RevealOnScroll>
   </section>

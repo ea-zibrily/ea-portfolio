@@ -36,4 +36,21 @@ describe('Project detail and lookup functions', () => {
       expect(project.contributions.length).toBeGreaterThan(0)
     }
   })
+
+  it('categorizes every project into one of the key groups (Professional, Freelance, Gamejam, Personal)', () => {
+    const categories = ['professional', 'freelance', 'gamejam', 'personal']
+    function getCategory(project) {
+      const cat = (project.category || '').toLowerCase()
+      if (cat.includes('professional')) return 'professional'
+      if (cat.includes('freelance') || cat.includes('educational')) return 'freelance'
+      if (cat.includes('game jam') || cat.includes('gamejam')) return 'gamejam'
+      if (cat.includes('personal')) return 'personal'
+      return 'unknown'
+    }
+
+    for (const project of projects) {
+      const cat = getCategory(project)
+      expect(categories).toContain(cat)
+    }
+  })
 })
