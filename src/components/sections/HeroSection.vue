@@ -52,19 +52,20 @@ onMounted(() => {
     class="scroll-mt-var(--nav-h) flex flex-col justify-between min-h-[calc(100vh-var(--nav-h))] pt-8 pb-6 px-4 md:px-8"
   >
     <div class="flex-1 flex items-center justify-center">
-      <div class="w-full flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center">
-        <div class="space-y-4 text-center md:text-left max-w-xl">
-          <p class="font-mono text-primary font-medium tracking-wide text-sm sm:text-base">>_ Hello World, I'm</p>
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-text tracking-tight">
+      <div class="w-full flex flex-col-reverse gap-8 items-center md:flex-row md:gap-10 lg:gap-14 md:justify-center">
+        <div class="space-y-4 text-center md:text-left flex-1 max-w-2xl">
+          <p class="font-mono text-primary font-medium tracking-wide text-sm sm:text-base">Hello World, I'm</p>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-text tracking-tight whitespace-nowrap">
             {{ profile.name }}
           </h1>
-          <div class="py-1">
+          <div class="py-1 min-h-[2.25rem] md:min-h-[2.75rem] flex items-center justify-center md:justify-start">
             <p
               ref="typewriter"
-              class="typewrite text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent min-h-2rem"
+              class="typewrite text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent leading-normal"
             >
-              <span class="wrap">{{ txt }}</span>
+              <span class="wrap">{{ txt || '\u00A0' }}</span>
             </p>
+            <span class="inline-block w-[2px] h-5 md:h-6 bg-primary ml-1 animate-pulse" aria-hidden="true"></span>
           </div>
           <p class="text-text-muted text-base md:text-lg leading-relaxed">
             {{ profile.intro }} <span class="wave inline-block">👋🏼</span>
@@ -105,7 +106,7 @@ onMounted(() => {
             width="280"
             height="280"
             decoding="async"
-            class="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-4 border-primary shadow-xl object-cover"
+            class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-primary shadow-xl object-cover shrink-0"
             :src="profile.avatar"
           />
         </div>
