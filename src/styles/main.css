@@ -15,6 +15,7 @@
   --color-accent: var(--accent);
   --color-tag: var(--tag-bg);
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 *, *::before, *::after {
