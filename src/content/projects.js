@@ -8,7 +8,7 @@ export default [
     status: 'Full Release',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-mager1.png',
+    cover: '/img/portfolio-mager1.webp',
     summary: 'A casual, endless runner game about a young man named Bobi who wants to avoid productive activities in order to increase his laziness.',
     overview: 'Mager 1: Belum Produktif is a casual, endless runner game about a young man named Bobi who wants to avoid productive activities in order to increase his laziness.',
     contributions: [
@@ -36,7 +36,7 @@ export default [
     status: 'Full Release',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-elker2043.png',
+    cover: '/img/portfolio-elker2043.webp',
     summary: 'An adventure game about a hacker named Ele who infiltrates a corporate building to reveal covert truths.',
     overview: 'An adventure game about a hacker named Ele who infiltrates a company building to reveal all the truth that exists. To fulfill his ambition, Ele must go secretly to find the correct data there.',
     contributions: [
@@ -63,7 +63,7 @@ export default [
     status: 'Full Release',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-orionjourney.png',
+    cover: '/img/portfolio-orionjourney.webp',
     summary: 'An adventure shooter game about the astronaut named Orion searching for a habitable planet for humankind.',
     overview: 'Orion Journey: We Found a Planet is an adventure, shooter game about the astronaut named Orion who is looking for a planet suitable for humankind to live on.',
     contributions: [
@@ -90,7 +90,7 @@ export default [
     status: 'Demo Release',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-egg.png',
+    cover: '/img/portfolio-egg.webp',
     summary: 'An online casual multiplayer game about 2 ducks fighting over their precious eggs.',
     overview: 'An online casual multiplayer game, about the fight between 2 ducks fighting over their eggs.',
     contributions: [
@@ -117,7 +117,7 @@ export default [
     status: 'Postponed',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-cldy.png',
+    cover: '/img/portfolio-cldy.webp',
     summary: 'A typing-puzzle adventure game about searching for a lost sibling in a mysterious cloud dimension.',
     overview: 'A typing-puzzle, adventure game about a man named Ego who is looking for his missing sister who accidentally touched a mysterious cloud that threw them into a cloud dimension named Cloudy.',
     contributions: [
@@ -144,7 +144,7 @@ export default [
     status: 'Handover',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-monkeyarm.png',
+    cover: '/img/portfolio-monkeyarm.webp',
     summary: 'An educational quiz game training basic logical reasoning through visual programming mechanics.',
     overview: 'Monkey Arm is an educational quiz game that aims to test and train players basic logical skills by using visual programming as the main mechanic.',
     contributions: [
@@ -171,7 +171,7 @@ export default [
     status: 'Full Release',
     period: '2023',
     featured: true,
-    cover: '/img/portfolio-labirin.png',
+    cover: '/img/portfolio-labirin.webp',
     summary: 'A puzzle-adventure game about exploring diverse mazes to recover missing letters of the alphabet.',
     overview: 'A puzzle-adventure game about Devan and Rhea who is exploring various mazes to find the missing alphabet.',
     contributions: [
@@ -198,7 +198,7 @@ export default [
     status: 'Alpha Testing',
     period: '2023',
     featured: true,
-    cover: '/img/portfolio-garuda.png',
+    cover: '/img/portfolio-garuda.webp',
     summary: 'An action-shooter game following the Garuda Force squad across international missions to retrieve gemstones.',
     overview: 'An action-shooter game about the adventures of the Garuda Force squad to defeat enemies and find gemstones in various parts of the world.',
     contributions: [
@@ -225,7 +225,7 @@ export default [
     status: 'Full Release',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-tangkap.png',
+    cover: '/img/portfolio-tangkap.webp',
     summary: 'An interactive AR arcade filter game challenging players to catch falling celestial stars.',
     overview: 'Tangkap Bintang is an arcade filter game that requires players to capture stars.',
     contributions: [
@@ -252,7 +252,7 @@ export default [
     status: 'Full Release',
     period: '2023',
     featured: false,
-    cover: '/img/portfolio-mendaki.png',
+    cover: '/img/portfolio-mendaki.webp',
     summary: 'An engaging AR arcade filter requiring players to jump between dynamic platforms.',
     overview: 'Mendaki Puncak is an arcade filter game that requires players to jump over platforms.',
     contributions: [
@@ -279,7 +279,7 @@ export default [
     status: 'On Development',
     period: '2024',
     featured: false,
-    cover: '/img/portfolio-taksa.png',
+    cover: '/img/portfolio-taksa.webp',
     summary: 'A narrative-driven visual novel about combating medical hoaxes and disinformation.',
     overview: 'Taksa is a visual novel educational game about Dhio life who is confused by hoaxes about his daughter treatment.',
     contributions: [
@@ -306,7 +306,7 @@ export default [
     status: 'On Development',
     period: '2024',
     featured: false,
-    cover: '/img/portfolio-defense.png',
+    cover: '/img/portfolio-defense.webp',
     summary: 'A high-energy semi-rhythm game featuring a soccer defense thematic.',
     overview: 'A semi-rhythm game with a football theme.',
     contributions: [
@@ -333,7 +333,7 @@ export default [
     status: 'Runtime Development',
     period: '2025',
     featured: true,
-    cover: '/img/portfolio-ghost.png',
+    cover: '/img/portfolio-ghost.webp',
     summary: 'A block-breaker game featuring an Indonesian ghost theme with dark humor elements.',
     overview: 'A block-breaker game with a ghost theme and dark joke twist.',
     contributions: [
@@ -360,7 +360,7 @@ export default [
     status: 'Full Release',
     period: '2025',
     featured: true,
-    cover: '/img/portfolio-tuyul.png',
+    cover: '/img/portfolio-tuyul.webp',
     summary: 'An arcade pinball adventure starring a cheeky tuyul against a wild boar gang.',
     overview: 'A pinball adventure about tuyul versus the sneaky boar gank.',
     contributions: [

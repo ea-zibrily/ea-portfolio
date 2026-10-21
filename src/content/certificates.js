@@ -6,7 +6,7 @@ export default [
     issuer: 'Unity Technologies',
     issued: '2023-06',
     expires: '2026-06',
-    image: '/img/certificate-associate.png',
+    image: '/img/certificate-associate.webp',
     credentialUrl: 'https://www.credly.com/badges/48ca8436-b76a-4732-ae44-2c6e60f4aaa2/linked_in_profile',
     github: null
   },
@@ -16,7 +16,7 @@ export default [
     issuer: 'Coding Studio',
     issued: '2023-06',
     expires: null,
-    image: '/img/certificate-fundamental_v2.png',
+    image: '/img/certificate-fundamental_v2.webp',
     credentialUrl: 'https://codingstudio.id/certificate/75AF238A1C-75A99878E2-75A3383BC5/',
     github: null
   },
@@ -26,7 +26,7 @@ export default [
     issuer: 'Dicoding',
     issued: '2025-01',
     expires: '2028-01',
-    image: '/img/certificate-solid.png',
+    image: '/img/certificate-solid.webp',
     credentialUrl: 'https://www.dicoding.com/certificates/EYX4G2YOWZDL',
     github: null
   },
@@ -36,7 +36,7 @@ export default [
     issuer: 'IGGI',
     issued: '2025-08',
     expires: null,
-    image: '/img/certificate-live2dev.png',
+    image: '/img/certificate-live2dev.webp',
     credentialUrl: null,
     github: null
   },
@@ -46,7 +46,7 @@ export default [
     issuer: 'BNSP',
     issued: '2024-11',
     expires: '2027-11',
-    image: '/img/certificate-sertikom.png',
+    image: '/img/certificate-sertikom.webp',
     credentialUrl: null,
     github: null
   },
@@ -56,7 +56,7 @@ export default [
     issuer: 'PENS',
     issued: '2025-04',
     expires: '2027-04',
-    image: '/img/certificate-pept.png',
+    image: '/img/certificate-pept.webp',
     credentialUrl: null,
     github: null
   }

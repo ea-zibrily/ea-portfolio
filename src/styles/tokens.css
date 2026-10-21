@@ -1,30 +1,38 @@
 /* src/styles/tokens.css */
+/*
+  Custom Palette:
+  #0C243A (Twilight Navy)
+  #6A9EAE (Sea Glass Teal)
+  #92CFD8 (Aqua Mint)
+  #C4D9B7 (Sage Celadon)
+  #A86726 (Warm Copper)
+*/
 :root {
-  --bg: #F7F9FF;
+  --bg: #F4F8F4;
   --surface: #FFFFFF;
-  --surface-hover: #EEF2FF;
-  --border: #DCE3F5;
-  --text: #0B1530;
-  --text-muted: #4A5578;
-  --primary: #2747D6;
+  --surface-hover: #E8F0E7;
+  --border: #C4D9B7;
+  --text: #0C243A;
+  --text-muted: #3B616D;
+  --primary: #9A5A1B;
   --primary-fg: #FFFFFF;
-  --accent: #7C5CFF;
-  --tag-bg: #E6ECFF;
+  --accent: #297886;
+  --tag-bg: #E7EFE6;
   --nav-h: 4.5rem;
   color-scheme: light;
 }
 
 .dark {
-  --bg: #070B1A;
-  --surface: #0E1530;
-  --surface-hover: #16204A;
-  --border: #1F2A55;
-  --text: #E8EDFF;
-  --text-muted: #9AA6CC;
-  --primary: #6B8BFF;
-  --primary-fg: #070B1A;
-  --accent: #9D86FF;
-  --tag-bg: #1A2558;
+  --bg: #071726;
+  --surface: #0C243A;
+  --surface-hover: #14334E;
+  --border: #234768;
+  --text: #EEF5ED;
+  --text-muted: #8DB5C2;
+  --primary: #D48B40;
+  --primary-fg: #071726;
+  --accent: #92CFD8;
+  --tag-bg: #122F49;
   --nav-h: 4.5rem;
   color-scheme: dark;
 }

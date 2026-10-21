@@ -15,7 +15,7 @@ export function useTheme() {
       meta.name = 'theme-color'
       document.head.appendChild(meta)
     }
-    meta.content = isDark ? '#070B1A' : '#F7F9FF'
+    meta.content = isDark ? '#071726' : '#F4F8F4'
   }
 
   function handleSystemThemeChange(e) {
