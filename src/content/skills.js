@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     name: 'C',
-    imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg',
+    imageUrl: 'https://static.cdnlogo.com/logos/c/36/c.svg',
     status: 'Intermediate'
   },
   {
@@ -14,32 +14,32 @@ export default [
   {
     id: 3,
     name: 'C#',
-    imageUrl: 'https://www.cdnlogo.com/logos/c/27/c.svg',
-    status: 'Intermediate'
+    imageUrl: 'https://static.cdnlogo.com/logos/c/27/c.svg',
+    status: 'Advanced'
   },
   {
     id: 4,
     name: 'JavaScript',
     imageUrl: 'https://static.cdnlogo.com/logos/j/44/javascript.svg',
-    status: 'Beginner'
+    status: 'Advanced Beginner'
   },
   {
     id: 5,
     name: 'Unity',
     imageUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg',
-    status: 'Intermediate'
+    status: 'Advanced'
   },
   {
     id: 6,
     name: 'Meta Spark AR',
-    imageUrl: 'https://cdn.worldvectorlogo.com/logos/sparkar-by-facebook.svg',
-    status: 'Beginner'
+    imageUrl: 'https://static.cdnlogo.com/logos/m/59/meta.svg',
+    status: 'Advanced Beginner'
   },
   {
     id: 7,
     name: 'Figma',
     imageUrl: 'https://static.cdnlogo.com/logos/f/54/figma.svg',
-    status: 'Beginner'
+    status: 'Advanced Beginner'
   },
   {
     id: 8,
@@ -82,5 +82,29 @@ export default [
     name: 'MySQL',
     imageUrl: 'https://cdn-icons-png.flaticon.com/512/5968/5968313.png',
     status: 'Database'
+  },
+  {
+    id: 15,
+    name: 'Firebase',
+    imageUrl: 'https://static.cdnlogo.com/logos/f/11/firebase.svg',
+    status: 'Backend Service'
+  },
+  {
+    id: 16,
+    name: 'Azure PlayFab',
+    imageUrl: 'https://static.cdnlogo.com/logos/m/58/microsoft-azure.svg',
+    status: 'Backend Service'
+  },
+  {
+    id: 17,
+    name: 'Antigravity',
+    imageUrl: 'https://static.cdnlogo.com/logos/g/50/google-gemini.svg',
+    status: 'Agentic AI'
+  },
+  {
+    id: 18,
+    name: 'Claude Code',
+    imageUrl: 'https://static.cdnlogo.com/logos/c/63/claude-ai.svg',
+    status: 'Agentic AI'
   }
 ]
