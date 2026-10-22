@@ -1,5 +1,6 @@
 <script setup>
 import profile from '@/content/profile.js'
+import FooterLoader from '@/components/ui/FooterLoader.vue'
 import { useScrollSpy } from '@/composables/useScrollSpy.js'
 
 const { scrollTo } = useScrollSpy()
@@ -8,7 +9,8 @@ const currentYear = new Date().getFullYear()
 
 <template>
   <footer class="mt-20 border-t border-border bg-surface/70 py-12 px-4 md:px-8 pb-24 md:pb-12 text-text-muted text-sm">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-6">
+      <!-- Profile Info (Left) -->
       <div class="text-center md:text-left">
         <p class="font-semibold text-text">
           {{ profile.name }}
@@ -18,7 +20,13 @@ const currentYear = new Date().getFullYear()
         </p>
       </div>
 
-      <div class="flex items-center gap-4">
+      <!-- Developer Workstation Loading Dots Animation (True Dead Center) -->
+      <div class="flex items-center justify-center">
+        <FooterLoader />
+      </div>
+
+      <!-- Back to top (Right) -->
+      <div class="flex items-center justify-center md:justify-end gap-4">
         <button
           @click="scrollTo('home')"
           class="p-2 rounded-lg border border-border hover:bg-surface-hover text-text-muted hover:text-text transition-colors cursor-pointer bg-transparent"
