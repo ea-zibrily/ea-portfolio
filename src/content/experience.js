@@ -10,7 +10,7 @@ export default [
     companyUrl: 'https://bumistudio.co.id/',
     type: 'Full-time',
     location: 'Kota Malang, Indonesia (On-site)',
-    start: '2025-09',
+    start: '2025-10',
     end: null,
     summary: 'Developing and maintaining a cozy, turn-based game while improving system scalability, maintainability, and team workflows through configurable tools.',
     highlights: [
@@ -29,9 +29,9 @@ export default [
     company: 'Lentera Nusantara',
     companyUrl: 'https://lentera-nusantara.com/',
     type: 'Contract',
-    location: 'Bandung, Indonesia (Hybrid)',
+    location: 'Kota Bandung, Indonesia (Hybrid)',
     start: '2025-07',
-    end: '2025-09',
+    end: '2025-10',
     summary: 'Developed and maintained gameplay systems for a live mobile game while supporting ongoing feature development, cloud service integration, and operational activities.',
     highlights: [
       'Developed and enhanced gameplay systems, game mechanics, and core gameplay features.',
