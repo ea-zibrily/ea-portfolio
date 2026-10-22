@@ -65,11 +65,11 @@ export default [
   },
   {
     id: 'freelance-game-dev',
-    role: 'Game Programmer',
+    role: 'Game Developer',
     company: 'Tsukuyomi Studios',
     companyUrl: 'https://tsukuyomi-std.itch.io/',
     type: 'Freelance',
-    location: 'Surabaya, Indonesia',
+    location: 'Surabaya, Indonesia (Remote)',
     start: '2022-01',
     end: '2023-07',
     summary: 'Prototyped and shipped various indie titles, game jam submissions, and multiplayer experiments.',

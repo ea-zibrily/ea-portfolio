@@ -446,5 +446,48 @@ export default [
       playStore: null,
       instagram: null
     }
+  },
+  {
+    slug: 'little-tree-kingdom',
+    title: 'Little Tree Kingdom',
+    category: 'Professional Project',
+    role: 'Game Programmer',
+    status: 'Demo',
+    period: '2026',
+    featured: true,
+    cover: '/img/portfolio-ltk-cover.webp',
+    summary:
+      'A cozy roguelike deckbuilding and city-building game where players grow a sacred tree, build a thriving gnome kingdom, and defend against seasonal disasters and monsters.',
+    overview:
+      'Little Tree Kingdom is a relaxing blend of city-building and roguelike deckbuilding developed by Bumi Studio. Players step into the role of mayor in a gnome settlement, using cards to grow a sacred tree from roots to canopy, construct buildings, and gather vital resources. Each run spans dynamic seasons with random festivals, challenges, and looming monster threats. By completing altars and appealing to 12 distinct angels for powerful boons, players must strategize and adapt their deck to help their tree kingdom survive and thrive.',
+    contributions: [
+      'Architected core turn-based deckbuilder gameplay loops and card execution systems using MVP and event-driven patterns in Unity C#.',
+      'Engineered configurable ScriptableObject and several serialzied Game Action - Command Patterns.',
+      'Integrated in-game developer tooling, runtime debugging, and event telemetry with Quantum Console and Unity Analytics.',
+      'Optimized runtime performance, memory allocations, and asset loading to ensure smooth 60 FPS gameplay.'
+    ],
+    challenges: [],
+    solutions: [],
+    gallery: ['/img/portfolio-ltk-1.webp', '/img/portfolio-ltk-2.webp', '/img/portfolio-ltk-3.webp'],
+    video: 'https://youtu.be/On0ZXoA4oaE?si=XTn1ojmKbjLuuRIi',
+    tech: [
+      'C#',
+      'Unity Engine',
+      'Unity Analytics',
+      'PrimeTween',
+      'Flexalon',
+      'Quantum Console',
+      'Cinemachine',
+      'Git/GitHub',
+      'Antigravity',
+      'Claude'
+    ],
+    links: {
+      steam: 'https://store.steampowered.com/app/3938990/Little_Tree_Kingdom/',
+      github: null,
+      itch: null,
+      playStore: null,
+      instagram: null
+    }
   }
 ]
