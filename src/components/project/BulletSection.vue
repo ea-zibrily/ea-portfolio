@@ -24,7 +24,18 @@ defineProps({
         :key="index"
         class="flex items-start gap-3 text-sm sm:text-base text-text-muted leading-relaxed"
       >
-        <span class="text-primary font-bold shrink-0 mt-1">▹</span>
+        <svg
+          class="w-2.5 h-2.5 text-primary shrink-0 mt-[0.38em]"
+          viewBox="0 0 12 12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M3 2.5L9 6L3 9.5Z" />
+        </svg>
         <span>{{ item }}</span>
       </li>
     </ul>
