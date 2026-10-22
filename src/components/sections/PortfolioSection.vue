@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import projects from '@/content/projects.js'
 import ItemCard from '@/components/ui/ItemCard.vue'
+import TagPill from '@/components/ui/TagPill.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
 
 const categories = [
@@ -124,13 +125,12 @@ function getDemoLink(project) {
                 </p>
 
                 <div class="mt-2 flex flex-wrap gap-1.5">
-                  <span
+                  <TagPill
                     v-for="t in item.tech"
                     :key="t"
-                    class="px-2 py-0.5 rounded text-[11px] font-medium bg-tag border border-border text-text-muted"
-                  >
-                    {{ t }}
-                  </span>
+                    :label="t"
+                    variant="primary"
+                  />
                 </div>
 
                 <div class="w-full flex justify-between items-center mt-3 pt-3 border-t border-border/50">

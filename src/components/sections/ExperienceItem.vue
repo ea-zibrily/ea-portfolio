@@ -111,7 +111,7 @@ const isCurrent = computed(() => props.item.end === null)
           v-for="tag in item.tags"
           :key="tag"
           :label="tag"
-          variant="default"
+          variant="primary"
         />
       </div>
     </div>

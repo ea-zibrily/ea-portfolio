@@ -62,9 +62,7 @@ usePageMeta({
         <!-- Title & Metadata Header -->
         <header class="space-y-3 pb-6 border-b border-border/60">
           <div class="flex flex-wrap items-center gap-2">
-            <span class="text-xs font-bold tracking-wider uppercase text-primary">
-              {{ project.category }}
-            </span>
+             <span class="text-xs font-bold tracking-wider uppercase text-primary"></span>
             <span class="text-xs text-text-muted">•</span>
             <span class="text-xs text-text-muted font-medium">
               {{ project.period || '2023' }}
