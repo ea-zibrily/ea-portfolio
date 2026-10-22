@@ -6,7 +6,7 @@ export default [
     category: 'Game Jam Project',
     role: 'Game Developer',
     status: 'Release',
-    period: '2022',
+    period: '2021',
     featured: false,
     cover: '/img/portfolio-mager1.webp',
     summary:
@@ -37,7 +37,7 @@ export default [
     category: 'Personal Project',
     role: 'Game Developer',
     status: 'Release',
-    period: '2023',
+    period: '2022',
     featured: true,
     cover: '/img/portfolio-elker2043.webp',
     summary:
@@ -67,7 +67,7 @@ export default [
     category: 'Game Jam Project',
     role: 'Game Programmer, Game Designer',
     status: 'Release',
-    period: '2024',
+    period: '2023',
     featured: true,
     cover: '/img/portfolio-orionjourney.webp',
     summary:
@@ -97,7 +97,7 @@ export default [
     category: 'Personal Project',
     role: 'Game Developer',
     status: 'Demo',
-    period: '2024',
+    period: '2023',
     featured: true,
     cover: '/img/portfolio-egg.webp',
     summary: 'An online casual multiplayer game about 2 ducks fighting over their precious eggs.',
