@@ -53,7 +53,7 @@ onMounted(() => {
     <div class="flex-1 flex items-center justify-center">
       <div class="w-full flex flex-col-reverse gap-8 items-center md:flex-row md:gap-10 lg:gap-14 md:justify-center">
         <div class="space-y-4 text-center md:text-left flex-1 max-w-2xl">
-          <p class="font-mono text-primary font-medium tracking-wide text-sm sm:text-base">Hello World, I'm</p>
+          <p class="font-mono text-primary font-medium tracking-wide text-sm sm:text-base">>_ Hello World, I'm</p>
           <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-text tracking-tight whitespace-nowrap">
             {{ profile.name }}
           </h1>

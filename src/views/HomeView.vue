@@ -15,7 +15,7 @@ useScrollSpy()
 
 // Home page meta & OpenGraph tags
 usePageMeta({
-  title: 'Unity Game Programmer & Software Engineer',
+  title: '',
   description: `${profile.intro} ${profile.bio[0]}`,
   image: profile.avatar,
   url: 'https://ea-portfolio.netlify.app'

@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
         aria-label="Return to home top"
       >
         <span class="text-lg font-bold text-primary group-hover:opacity-85 transition-opacity">
-          Zibril Portfolio
+          Ea Portfolio
         </span>
       </button>
 
