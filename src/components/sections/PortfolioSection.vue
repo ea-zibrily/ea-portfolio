@@ -35,7 +35,7 @@ function getCategoryCount(catId) {
 }
 
 function getDemoLink(project) {
-  return project.links?.playStore || project.links?.itch || project.links?.instagram || null
+  return project.links?.steam || project.links?.playStore || project.links?.itch || project.links?.instagram || null
 }
 </script>
 
@@ -140,6 +140,19 @@ function getDemoLink(project) {
 
                   <!-- External Links with @click.stop to prevent card navigation -->
                   <div class="flex items-center gap-2" @click.stop>
+                    <a
+                      v-if="item.links?.steam"
+                      :href="item.links.steam"
+                      target="_blank"
+                      rel="noreferrer"
+                      :title="`View ${item.title} on Steam`"
+                      class="p-1.5 text-text-muted hover:text-primary transition-colors"
+                      @click.stop
+                    >
+                      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 14.819C1.868 20.091 6.643 24 12.33 24c6.627 0 12-5.373 12-12S18.605 0 11.979 0zM7.55 18.055l-1.83-.755c.307.729.932 1.291 1.704 1.523-.13-.238-.222-.507-.222-.796 0-.324.086-.628.234-.89l.114.918zm8.39-11.385c-1.258 0-2.279 1.019-2.279 2.277 0 1.258 1.021 2.279 2.279 2.279 1.257 0 2.278-1.021 2.278-2.279 0-1.258-1.021-2.277-2.278-2.277zm-9.012 9.071c-.722 0-1.312.585-1.312 1.307 0 .721.59 1.306 1.312 1.306.723 0 1.312-.585 1.312-1.306 0-.722-.589-1.307-1.312-1.307z"/>
+                      </svg>
+                    </a>
                     <a
                       v-if="item.links?.github"
                       :href="item.links.github"

@@ -22,7 +22,7 @@ function handleBack() {
 const hasLinks = computed(() => {
   if (!project.value?.links) return false
   const l = project.value.links
-  return Boolean(l.playStore || l.itch || l.github || l.instagram)
+  return Boolean(l.steam || l.playStore || l.itch || l.github || l.instagram)
 })
 
 const allProjectImages = computed(() => {
@@ -141,6 +141,24 @@ usePageMeta({
             <span class="h-[1.5px] flex-1 bg-border/60 rounded-full"></span>
           </h2>
           <div class="flex flex-col gap-2">
+            <a
+              v-if="project.links.steam"
+              :href="project.links.steam"
+              target="_blank"
+              rel="noreferrer"
+              class="flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-surface-hover/60 hover:bg-surface-hover border border-border hover:border-primary/50 text-text hover:text-primary transition-all text-sm font-medium"
+            >
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 14.819C1.868 20.091 6.643 24 12.33 24c6.627 0 12-5.373 12-12S18.605 0 11.979 0zM7.55 18.055l-1.83-.755c.307.729.932 1.291 1.704 1.523-.13-.238-.222-.507-.222-.796 0-.324.086-.628.234-.89l.114.918zm8.39-11.385c-1.258 0-2.279 1.019-2.279 2.277 0 1.258 1.021 2.279 2.279 2.279 1.257 0 2.278-1.021 2.278-2.279 0-1.258-1.021-2.277-2.278-2.277zm-9.012 9.071c-.722 0-1.312.585-1.312 1.307 0 .721.59 1.306 1.312 1.306.723 0 1.312-.585 1.312-1.306 0-.722-.589-1.307-1.312-1.307z"/>
+                </svg>
+                <span>Steam</span>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-text-muted" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+              </svg>
+            </a>
             <a
               v-if="project.links.playStore"
               :href="project.links.playStore"
