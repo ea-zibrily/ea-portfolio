@@ -1,6 +1,5 @@
 <script setup>
 import profile from '@/content/profile.js'
-import CvButton from '@/components/ui/CvButton.vue'
 import { useScrollSpy } from '@/composables/useScrollSpy.js'
 
 const { scrollTo } = useScrollSpy()
@@ -20,8 +19,6 @@ const currentYear = new Date().getFullYear()
       </div>
 
       <div class="flex items-center gap-4">
-        <CvButton variant="outline" />
-
         <button
           @click="scrollTo('home')"
           class="p-2 rounded-lg border border-border hover:bg-surface-hover text-text-muted hover:text-text transition-colors cursor-pointer bg-transparent"

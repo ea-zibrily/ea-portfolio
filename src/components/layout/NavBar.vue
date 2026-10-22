@@ -3,7 +3,6 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import sections from '@/content/sections.js'
 import profile from '@/content/profile.js'
-import CvButton from '@/components/ui/CvButton.vue'
 import ThemeToggle from '@/components/layout/ThemeToggle.vue'
 import { useScrollSpy } from '@/composables/useScrollSpy.js'
 
@@ -94,8 +93,7 @@ onBeforeUnmount(() => {
       <div class="flex items-center gap-2 sm:gap-3">
         <ThemeToggle />
 
-        <div class="hidden sm:flex items-center gap-3">
-          <CvButton variant="outline" />
+        <div class="hidden sm:flex items-center gap-2">
           <a
             :href="profile.github"
             target="_blank"
