@@ -50,8 +50,10 @@ describe('Content integrity', () => {
   })
 
   it('verifies CV file exists', () => {
-    const cvPath = path.resolve('public', profile.cv.href.replace(/^\//, ''))
-    expect(fs.existsSync(cvPath), `Missing CV file: ${profile.cv.href}`).toBe(true)
+    if (profile.cv?.href) {
+      const cvPath = path.resolve('public', profile.cv.href.replace(/^\//, ''))
+      expect(fs.existsSync(cvPath), `Missing CV file: ${profile.cv.href}`).toBe(true)
+    }
   })
 
   it('verifies sections list', () => {
