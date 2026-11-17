@@ -62,6 +62,39 @@ export default [
     }
   },
   {
+    slug: 'gizz-eepis-vr',
+    title: 'Gizz EEPIS: Virtual Reality',
+    category: 'Freelance Project',
+    role: 'Game Programmer',
+    status: 'Release',
+    period: '2022',
+    featured: true,
+    cover: '/img/portfolio-gizz-vr-1.webp',
+    summary:
+      'A collaborative educational VR game developed between Gizz (Germany) and the Department of Multimedia Creative Technology PENS.',
+    overview:
+      'Gizz EEPIS: Virtual Reality is an educational VR gamification experience designed to instruct and evaluate learners on professional video production camera setup, operation, and shooting techniques in an immersive virtual studio environment.',
+    contributions: [
+      'Implemented and customized core Oculus Quest 2 VR project templates, player rig locomotion, and hand-controller interaction mechanics.',
+      'Integrated interactive educational modules featuring multimedia quizzes, contextual instructional diagrams, and video tutorials.',
+      'Optimized in-game spatial UI canvas flow and 3D interaction ergonomics for comfortable virtual reality user experiences.',
+      'Collaborated with the 3D art and video production teams to optimize polygon counts, texture atlases, and scene lighting for stable mobile VR framerates.',
+      'Managed application build pipelines and deployment exports for Oculus Quest 2 standalone headsets.'
+    ],
+    challenges: [],
+    solutions: [],
+    gallery: ['/img/portfolio-gizz-vr-2.webp', '/img/portfolio-gizz-vr-3.webp', '/img/portfolio-gizz-vr-4.webp'],
+    video: null,
+    tech: ['C#', 'Unity Engine', 'Virtual Reality', 'Oculus Quest 2', 'Git/GitHub'],
+    links: {
+      steam: null,
+      github: null,
+      itch: null,
+      playStore: null,
+      instagram: null
+    }
+  },
+  {
     slug: 'orion-journey',
     title: 'Orion Journey: We Found a Planet!',
     category: 'Game Jam Project',
