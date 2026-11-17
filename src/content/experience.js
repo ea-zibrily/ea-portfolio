@@ -31,7 +31,7 @@ export default [
     type: 'Contract',
     location: 'Kota Bandung, Indonesia (Hybrid)',
     start: '2025-07',
-    end: '2025-10',
+    end: '2025-09',
     summary: 'Developed and maintained gameplay systems for a live mobile game while supporting ongoing feature development, cloud service integration, and operational activities.',
     highlights: [
       'Developed and enhanced gameplay systems, game mechanics, and core gameplay features.',
@@ -66,18 +66,21 @@ export default [
   {
     id: 'freelance-game-dev',
     role: 'Game Developer',
-    company: 'Tsukuyomi Studios',
+    company: 'tsukuyomi.',
     companyUrl: 'https://tsukuyomi-std.itch.io/',
     type: 'Freelance',
     location: 'Surabaya, Indonesia (Remote)',
-    start: '2022-01',
-    end: '2023-07',
+    start: '2022-07',
+    end: '2024-01',
     summary: 'Prototyped and shipped various indie titles, game jam submissions, and multiplayer experiments.',
     highlights: [
-      'Engineered stealth infiltration mechanics and terminal puzzles for ELKER 2043.',
-      'Built online casual multiplayer networking using Photon PUN for Ohh No My Egg!',
-      'Created endless runner procedural generation and touch controls for Mager 1: Belum Produktif.',
-      'Completed rapid game jam prototypes under tight deadlines including Live2Dev Gamejam 2025.'
+      'Developed and implemented gameplay mechanics, including player controllers, coin collection, boss behaviors, and game management systems.', 
+      'Designed game systems and mechanics by creating Game Design Documents (GDD), conducting research, and defining gameplay rules and level designs.', 
+      'Developed boss systems featuring unique behaviors, basic attacks, HP management, and skill mechanics.', 
+      'Configured and customized VR learning application templates, integrating educational content such as questions, images, and videos.', 
+      'Optimized user interface flows and collaborated with multidisciplinary teams to improve application usability and asset integration.', 
+      'Developed visual programming features using Unity uBlockly package, including undo/redo functionality, multiple workspaces, and block acceleration.', 
+      'Supported application building, debugging, and deployment, including exporting VR applications to Oculus devices.'
     ],
     tags: ['C#', 'Unity Engine', 'Cinemachine', 'Photon Multiplayer', 'Prime Tween', 'Ink', 'Git/GitHub']
   }
