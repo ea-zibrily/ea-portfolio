@@ -481,56 +481,56 @@ export default [
       instagram: null
     }
   },
-  {
-    slug: 'little-tree-kingdom',
-    title: 'Little Tree Kingdom',
-    category: 'Professional Project',
-    role: 'Game Programmer',
-    status: 'Demo',
-    period: '2026',
-    featured: true,
-    cover: '/img/portfolio-ltk-cover.webp',
-    summary:
-      'A cozy roguelike deckbuilding and city-building game where players grow a sacred tree, build a thriving gnome kingdom, and defend against seasonal disasters and monsters.',
-    overview:
-      'Little Tree Kingdom is a relaxing blend of city-building and roguelike deckbuilding developed by Bumi Studio. Players step into the role of mayor in a gnome settlement, using cards to grow a sacred tree from roots to canopy, construct buildings, and gather vital resources. Each run spans dynamic seasons with random festivals, challenges, and looming monster threats. By completing altars and appealing to 12 distinct angels for powerful boons, players must strategize and adapt their deck to help their tree kingdom survive and thrive.',
-    contributions: [
-      'Architected core turn-based deckbuilder gameplay loops and card execution systems using MVP and event-driven patterns in Unity C#.',
-      'Engineered configurable ScriptableObject frameworks and serialized Command / Game Action patterns, enabling designers and artists to customize gameplay content and balance easily without modifying code.',
-      'Developed a robust snapshot-based save system to capture complete game state and orchestrated phased asynchronous loading sequences.',
-      'Integrated in-game developer tooling, runtime debugging, and event telemetry with Quantum Console and Unity Analytics.',
-      'Optimized runtime performance, memory allocations, and asset loading to ensure smooth 60 FPS gameplay.'
-    ],
-    challenges: [
-      'Managing high complexity and preventing tight coupling across large project modules, including cards, settlements, seasonal events, and angel boons.',
-      'Enabling non-technical game designers and artists to safely customize card logic, building stats, and visual feedback without breaking core rules.',
-      'Serializing and restoring the complete game world state reliably without long loading hitches or state desynchronization.'
-    ],
-    solutions: [
-      'Implemented clean MVP and Command / Game Action patterns, decoupling gameplay execution from state management for maximum modularity.',
-      'Built a data-driven ScriptableObject architecture with intuitive Inspector tooling, allowing rapid, error-free content tweaks directly in the Editor.',
-      'Architected a snapshot save-and-load pipeline that serializes game states into structured payloads and orchestrates asynchronous restoration during scene loading.'
-    ],
-    gallery: ['/img/portfolio-ltk-1.webp', '/img/portfolio-ltk-2.webp', '/img/portfolio-ltk-3.webp'],
-    video: 'https://youtu.be/On0ZXoA4oaE?si=XTn1ojmKbjLuuRIi',
-    tech: [
-      'C#',
-      'Unity Engine',
-      'Unity Analytics',
-      'PrimeTween',
-      'Flexalon',
-      'Quantum Console',
-      'Cinemachine',
-      'Git/GitHub',
-      'Antigravity',
-      'Claude'
-    ],
-    links: {
-      steam: 'https://store.steampowered.com/app/3938990/Little_Tree_Kingdom/',
-      github: null,
-      itch: null,
-      playStore: null,
-      instagram: null
-    }
-  }
+  // {
+  //   slug: 'little-tree-kingdom',
+  //   title: 'Little Tree Kingdom',
+  //   category: 'Professional Project',
+  //   role: 'Game Programmer',
+  //   status: 'Demo',
+  //   period: '2026',
+  //   featured: true,
+  //   cover: '/img/portfolio-ltk-cover.webp',
+  //   summary:
+  //     'A cozy roguelike deckbuilding and city-building game where players grow a sacred tree, build a thriving gnome kingdom, and defend against seasonal disasters and monsters.',
+  //   overview:
+  //     'Little Tree Kingdom is a relaxing blend of city-building and roguelike deckbuilding developed by Bumi Studio. Players step into the role of mayor in a gnome settlement, using cards to grow a sacred tree from roots to canopy, construct buildings, and gather vital resources. Each run spans dynamic seasons with random festivals, challenges, and looming monster threats. By completing altars and appealing to 12 distinct angels for powerful boons, players must strategize and adapt their deck to help their tree kingdom survive and thrive.',
+  //   contributions: [
+  //     'Architected core turn-based deckbuilder gameplay loops and card execution systems using MVP and event-driven patterns in Unity C#.',
+  //     'Engineered configurable ScriptableObject frameworks and serialized Command / Game Action patterns, enabling designers and artists to customize gameplay content and balance easily without modifying code.',
+  //     'Developed a robust snapshot-based save system to capture complete game state and orchestrated phased asynchronous loading sequences.',
+  //     'Integrated in-game developer tooling, runtime debugging, and event telemetry with Quantum Console and Unity Analytics.',
+  //     'Optimized runtime performance, memory allocations, and asset loading to ensure smooth 60 FPS gameplay.'
+  //   ],
+  //   challenges: [
+  //     'Managing high complexity and preventing tight coupling across large project modules, including cards, settlements, seasonal events, and angel boons.',
+  //     'Enabling non-technical game designers and artists to safely customize card logic, building stats, and visual feedback without breaking core rules.',
+  //     'Serializing and restoring the complete game world state reliably without long loading hitches or state desynchronization.'
+  //   ],
+  //   solutions: [
+  //     'Implemented clean MVP and Command / Game Action patterns, decoupling gameplay execution from state management for maximum modularity.',
+  //     'Built a data-driven ScriptableObject architecture with intuitive Inspector tooling, allowing rapid, error-free content tweaks directly in the Editor.',
+  //     'Architected a snapshot save-and-load pipeline that serializes game states into structured payloads and orchestrates asynchronous restoration during scene loading.'
+  //   ],
+  //   gallery: ['/img/portfolio-ltk-1.webp', '/img/portfolio-ltk-2.webp', '/img/portfolio-ltk-3.webp'],
+  //   video: 'https://youtu.be/On0ZXoA4oaE?si=XTn1ojmKbjLuuRIi',
+  //   tech: [
+  //     'C#',
+  //     'Unity Engine',
+  //     'Unity Analytics',
+  //     'PrimeTween',
+  //     'Flexalon',
+  //     'Quantum Console',
+  //     'Cinemachine',
+  //     'Git/GitHub',
+  //     'Antigravity',
+  //     'Claude'
+  //   ],
+  //   links: {
+  //     steam: 'https://store.steampowered.com/app/3938990/Little_Tree_Kingdom/',
+  //     github: null,
+  //     itch: null,
+  //     playStore: null,
+  //     instagram: null
+  //   }
+  // }
 ]
