@@ -1,7 +1,7 @@
 export default {
   name: 'Zibril Yuan Afrianto',
-  nickname: 'ea',
-  roles: ['Game Developer', 'Unity Programmer', 'Software Engineer', 'Tech Enthusiast'],
+  nickname: 'Ea',
+  roles: ['Game Developer', 'Game Programmer', 'Unity Software Engineer', 'Tech Enthusiast'],
   intro: 'Welcome to My Portfolio Website.',
   bio: [
     'Hi everyone! My name is Zibril Yuan Afrianto. I am a Bachelor of Applied Science majoring in Game Technology from Politeknik Elektronika Negeri Surabaya. I have an interest in Game Development and my expertise focuses on Unity Game Programming. My job is to implement various mechanics and systems designed by game designers and ensure that the game\'s core-loop runs smoothly.',

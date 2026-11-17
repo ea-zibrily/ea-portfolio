@@ -16,7 +16,7 @@ const currentYear = new Date().getFullYear()
           {{ profile.name }}
         </p>
         <p class="text-xs text-text-muted mt-1">
-          Unity Game Programmer & Software Engineer
+          Game Programmer & Unity Software Engineer
         </p>
       </div>
 
