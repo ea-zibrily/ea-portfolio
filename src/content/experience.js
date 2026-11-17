@@ -49,7 +49,7 @@ export default [
     company: 'IOTA Kreatif Media',
     companyUrl: 'https://iota.co.id/',
     type: 'Internship',
-    location: 'Jakarta Pusat, Indonesia (Hybird)',
+    location: 'Jakarta Pusat, Indonesia (Hybrid)',
     start: '2024-01',
     end: '2025-02',
     summary: 'Built interactive educational games and AR experiences aimed at children and early education learners.',
