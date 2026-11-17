@@ -1,10 +1,19 @@
+<script>
+import { ref } from 'vue'
+
+// Persist active category across route transitions (K-11)
+export const activeCategory = ref('all')
+</script>
+
 <script setup>
-import { ref, computed } from 'vue'
-import { RouterLink } from 'vue-router'
+import { computed, onMounted } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 import projects from '@/content/projects.js'
 import ItemCard from '@/components/ui/ItemCard.vue'
 import TagPill from '@/components/ui/TagPill.vue'
 import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
+
+const route = useRoute()
 
 const categories = [
   { id: 'all', label: 'All' },
@@ -13,8 +22,6 @@ const categories = [
   { id: 'gamejam', label: 'Game Jam Project' },
   { id: 'personal', label: 'Personal Project' }
 ]
-
-const activeCategory = ref('all')
 
 function matchesCategory(project, catId) {
   if (catId === 'all') return true
@@ -37,6 +44,16 @@ function getCategoryCount(catId) {
 function getDemoLink(project) {
   return project.links?.steam || project.links?.playStore || project.links?.itch || project.links?.instagram || null
 }
+
+onMounted(() => {
+  if (route.hash && route.hash.startsWith('#project-')) {
+    const slug = route.hash.replace('#project-', '')
+    const target = projects.find(p => p.slug === slug)
+    if (target && !matchesCategory(target, activeCategory.value)) {
+      activeCategory.value = 'all'
+    }
+  }
+})
 </script>
 
 <template>
@@ -90,11 +107,8 @@ function getDemoLink(project) {
         v-for="(item, index) in filteredProjects"
         :key="item.slug"
       >
-        <RouterLink
-          :to="'/project/' + item.slug"
-          class="h-full block group focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
-          :aria-label="`View details for ${item.title}`"
-        >
+        <!-- Card container: relative to anchor stretched title link (K-02) -->
+        <div class="relative h-full group rounded-xl">
           <ItemCard
             :id="'project-' + item.slug"
             class="h-full scroll-mt-[calc(var(--nav-h)+1.5rem)] group-hover:border-primary/50 group-hover:shadow-lg transition-all duration-300"
@@ -111,7 +125,7 @@ function getDemoLink(project) {
                   class="w-full h-48 object-cover shadow-xs group-hover:scale-105 transition-transform duration-300"
                   :src="item.cover"
                 />
-                <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
               </div>
             </template>
 
@@ -123,7 +137,13 @@ function getDemoLink(project) {
                 </div>
 
                 <h3 class="text-lg font-bold text-text tracking-tight group-hover:text-primary transition-colors">
-                  {{ item.title }}
+                  <RouterLink
+                    :to="'/project/' + item.slug"
+                    class="focus:outline-none focus:ring-2 focus:ring-primary rounded-lg after:absolute after:inset-0"
+                    :aria-label="`View details for ${item.title}`"
+                  >
+                    {{ item.title }}
+                  </RouterLink>
                 </h3>
 
                 <p class="text-xs sm:text-sm text-text-muted line-clamp-3 mt-1">
@@ -145,16 +165,16 @@ function getDemoLink(project) {
                   {{ item.status }}
                 </span>
 
-                <!-- External Links with @click.stop to prevent card navigation -->
-                <div class="flex items-center gap-2" @click.stop>
+                <!-- External Links elevated above the stretched card link (relative z-10) -->
+                <div class="relative z-10 flex items-center gap-2">
                   <a
                     v-if="item.links?.steam"
                     :href="item.links.steam"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     :title="`View ${item.title} on Steam`"
+                    :aria-label="`View ${item.title} on Steam`"
                     class="p-1.5 text-text-muted hover:text-primary transition-colors"
-                    @click.stop
                   >
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                       <path d="M11.979 0C5.678 0 .511 4.86.022 11.037l6.432 2.658c.545-.371 1.203-.59 1.912-.59.063 0 .125.004.188.006l2.861-4.142V8.91c0-2.495 2.028-4.524 4.524-4.524 2.494 0 4.524 2.031 4.524 4.527s-2.03 4.525-4.524 4.525h-.105l-4.076 2.911c0 .052.005.105.005.159 0 1.875-1.515 3.396-3.39 3.396-1.635 0-3.016-1.173-3.331-2.727L.436 14.819C1.868 20.091 6.643 24 12.33 24c6.627 0 12-5.373 12-12S18.605 0 11.979 0zM7.55 18.055l-1.83-.755c.307.729.932 1.291 1.704 1.523-.13-.238-.222-.507-.222-.796 0-.324.086-.628.234-.89l.114.918zm8.39-11.385c-1.258 0-2.279 1.019-2.279 2.277 0 1.258 1.021 2.279 2.279 2.279 1.257 0 2.278-1.021 2.278-2.279 0-1.258-1.021-2.277-2.278-2.277zm-9.012 9.071c-.722 0-1.312.585-1.312 1.307 0 .721.59 1.306 1.312 1.306.723 0 1.312-.585 1.312-1.306 0-.722-.589-1.307-1.312-1.307z"/>
@@ -164,10 +184,10 @@ function getDemoLink(project) {
                     v-if="item.links?.github"
                     :href="item.links.github"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     :title="`View ${item.title} on GitHub`"
+                    :aria-label="`View ${item.title} on GitHub`"
                     class="p-1.5 text-text-muted hover:text-primary transition-colors"
-                    @click.stop
                   >
                     <svg
                       stroke="currentColor"
@@ -187,10 +207,10 @@ function getDemoLink(project) {
                     v-if="getDemoLink(item)"
                     :href="getDemoLink(item)"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     :title="`Open ${item.title} live demo`"
+                    :aria-label="`Open ${item.title} live demo`"
                     class="p-1.5 text-text-muted hover:text-primary transition-colors"
-                    @click.stop
                   >
                     <svg
                       stroke="currentColor"
@@ -210,7 +230,7 @@ function getDemoLink(project) {
               </div>
             </div>
           </ItemCard>
-        </RouterLink>
+        </div>
       </RevealOnScroll>
     </div>
 

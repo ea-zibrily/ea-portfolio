@@ -9,13 +9,5 @@ export const createApp = ViteSSG(
   {
     routes,
     scrollBehavior
-  },
-  ({ router, isClient }) => {
-    if (isClient) {
-      router.beforeEach((to, from, next) => {
-        document.title = (to.meta.title ? `${to.meta.title} — ` : '') + 'Zibril Yuan Afrianto'
-        next()
-      })
-    }
   }
 )

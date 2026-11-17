@@ -6,8 +6,7 @@
 <template>
   <div
     class="footer-loader flex items-center gap-3 sm:gap-4 px-3 py-1.5 rounded-full border border-border/40 bg-surface/40 select-none shadow-2xs"
-    role="status"
-    aria-label="Developer workstation loading animation"
+    aria-hidden="true"
   >
     <!-- 1. Desk -->
     <div class="loader-item item-desk" title="Desk">

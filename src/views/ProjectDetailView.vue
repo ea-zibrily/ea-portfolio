@@ -35,7 +35,8 @@ const allProjectImages = computed(() => {
 usePageMeta({
   title: computed(() => (project.value ? project.value.title : 'Project Details')),
   description: computed(() => (project.value ? project.value.summary : '')),
-  image: computed(() => (project.value ? project.value.cover : ''))
+  image: computed(() => (project.value ? project.value.cover : '')),
+  url: computed(() => (project.value ? `/project/${project.value.slug}` : ''))
 })
 </script>
 

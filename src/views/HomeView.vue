@@ -37,7 +37,10 @@ useHead({
             jobTitle: 'Unity Game Programmer',
             url: 'https://ea-portfolio.netlify.app',
             image: `https://ea-portfolio.netlify.app${profile.avatar}`,
-            sameAs: [profile.github]
+            sameAs: [
+              profile.github,
+              ...(profile.linkedin && !profile.linkedin.startsWith('TODO') ? [profile.linkedin] : [])
+            ]
           },
           {
             '@type': 'WebSite',

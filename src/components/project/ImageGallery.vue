@@ -20,14 +20,16 @@ const props = defineProps({
 const embedVideoUrl = computed(() => {
   if (!props.video) return null
   const url = props.video.trim()
-  if (url.includes('/embed/')) return url
   const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/)
   if (shortMatch) {
-    return `https://www.youtube.com/embed/${shortMatch[1]}`
+    return `https://www.youtube-nocookie.com/embed/${shortMatch[1]}`
   }
   const watchMatch = url.match(/[?&]v=([a-zA-Z0-9_-]+)/)
   if (watchMatch) {
-    return `https://www.youtube.com/embed/${watchMatch[1]}`
+    return `https://www.youtube-nocookie.com/embed/${watchMatch[1]}`
+  }
+  if (url.includes('/embed/')) {
+    return url.replace('youtube.com', 'youtube-nocookie.com')
   }
   return url
 })
@@ -51,16 +53,24 @@ const videoThumbnail = computed(() => {
 // Max 3 images as requested
 const maxImages = computed(() => (props.images || []).slice(0, 3))
 
-// If video exists, default to video view; otherwise first screenshot
+// If video exists, default to video tab poster; otherwise first screenshot
 const selectedIndex = ref(props.video ? 'video' : 0)
+const isVideoPlaying = ref(false)
 const isLightboxOpen = ref(false)
 
 function selectImage(idx) {
+  if (idx !== 'video') {
+    isVideoPlaying.value = false
+  }
   selectedIndex.value = idx
 }
 
 function handleMainClick() {
-  if (selectedIndex.value !== 'video') {
+  if (selectedIndex.value === 'video') {
+    if (!isVideoPlaying.value) {
+      isVideoPlaying.value = true
+    }
+  } else {
     openLightbox(selectedIndex.value)
   }
 }
@@ -128,26 +138,57 @@ onBeforeUnmount(() => {
     <!-- Main Active Preview -->
     <div
       class="group relative overflow-hidden rounded-2xl border border-border bg-surface shadow-md aspect-video select-none"
-      :class="{ 'cursor-pointer': selectedIndex !== 'video' }"
+      :class="{ 'cursor-pointer': !isVideoPlaying }"
       @click="handleMainClick"
     >
-      <!-- Video Player -->
-      <iframe
-        v-if="selectedIndex === 'video' && embedVideoUrl"
-        :src="embedVideoUrl"
-        :title="`${projectTitle} trailer video`"
-        class="w-full h-full border-0"
-        allow="
-          accelerometer;
-          autoplay;
-          clipboard-write;
-          encrypted-media;
-          gyroscope;
-          picture-in-picture;
-          web-share;
-        "
-        allowfullscreen
-      ></iframe>
+      <!-- Video Player or Thumbnail Poster (K-09) -->
+      <div v-if="selectedIndex === 'video' && embedVideoUrl" class="w-full h-full relative bg-black">
+        <iframe
+          v-if="isVideoPlaying"
+          :src="embedVideoUrl + (embedVideoUrl.includes('?') ? '&' : '?') + 'autoplay=1'"
+          :title="`${projectTitle} trailer video`"
+          class="w-full h-full border-0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        ></iframe>
+
+        <!-- Video Poster with Play Button -->
+        <button
+          v-else
+          type="button"
+          @click.stop="isVideoPlaying = true"
+          class="w-full h-full relative cursor-pointer group/play p-0 border-0 bg-transparent block"
+          :aria-label="`Play ${projectTitle} trailer video`"
+        >
+          <img
+            v-if="videoThumbnail"
+            :src="videoThumbnail"
+            :alt="`${projectTitle} trailer poster`"
+            class="w-full h-full object-cover transition-transform duration-300 group-hover/play:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+          <div v-else class="w-full h-full bg-surface-hover flex items-center justify-center">
+            <span class="text-sm font-semibold text-text">Click to Play Trailer</span>
+          </div>
+          <!-- Play Badge Overlay -->
+          <div class="absolute inset-0 bg-black/40 group-hover/play:bg-black/25 transition-colors flex items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-primary/95 text-primary-fg flex items-center justify-center shadow-xl group-hover/play:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current ml-1" viewBox="0 0 20 20">
+                <path d="M4.5 3.5l11 6.5-11 6.5v-13z" />
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
 
       <!-- Image Preview -->
       <img
