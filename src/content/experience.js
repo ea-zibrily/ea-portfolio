@@ -5,11 +5,11 @@
 export default [
   {
     id: 'bumi-studio',
-    role: 'Game Programmer',
+    role: 'Associate Game Programmer',
     company: 'Bumi Studio',
     companyUrl: 'https://bumistudio.co.id/',
     type: 'Full-time',
-    location: 'Kota Malang, Indonesia (On-site)',
+    location: 'Malang, Indonesia (On-site)',
     start: '2025-10',
     end: null,
     summary: 'Developing and maintaining a cozy, turn-based game while improving system scalability, maintainability, and team workflows through configurable tools.',
@@ -29,7 +29,7 @@ export default [
     company: 'Lentera Nusantara',
     companyUrl: 'https://lentera-nusantara.com/',
     type: 'Contract',
-    location: 'Kota Bandung, Indonesia (Hybrid)',
+    location: 'Bandung, Indonesia (Hybrid)',
     start: '2025-07',
     end: '2025-09',
     summary: 'Developed and maintained gameplay systems for a live mobile game while supporting ongoing feature development, cloud service integration, and operational activities.',
