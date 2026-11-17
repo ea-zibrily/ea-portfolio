@@ -31,13 +31,13 @@
   "src/components/layout/ThemeToggle.vue": [],
   "src/components/layout/ThemeToggle.vue?vue&type=style&index=0&scoped=bbfce636&lang.css": [],
   "src/components/project/BulletSection.vue": [
-    "/assets/ProjectDetailView-BOIHAZY4.js"
+    "/assets/ProjectDetailView-DN6nG5dw.js"
   ],
   "src/components/project/ImageGallery.vue": [
-    "/assets/ProjectDetailView-BOIHAZY4.js"
+    "/assets/ProjectDetailView-DN6nG5dw.js"
   ],
   "src/components/project/PrevNextNav.vue": [
-    "/assets/ProjectDetailView-BOIHAZY4.js"
+    "/assets/ProjectDetailView-DN6nG5dw.js"
   ],
   "src/components/sections/AboutSection.vue": [],
   "src/components/sections/CertificateSection.vue": [],
@@ -45,17 +45,17 @@
   "src/components/sections/ExperienceItem.vue": [],
   "src/components/sections/ExperienceSection.vue": [],
   "src/components/sections/HeroSection.vue": [],
-  "src/components/sections/HeroSection.vue?vue&type=style&index=0&scoped=35d15cc3&lang.css": [],
+  "src/components/sections/HeroSection.vue?vue&type=style&index=0&scoped=8516a2e0&lang.css": [],
   "src/components/sections/PortfolioSection.vue": [],
-  "src/components/sections/PortfolioSection.vue?vue&type=style&index=0&scoped=ce004d77&lang.css": [],
+  "src/components/sections/PortfolioSection.vue?vue&type=style&index=0&scoped=f87a7d94&lang.css": [],
   "src/components/sections/SkillsSection.vue": [],
   "src/components/sections/SkillsSection.vue?vue&type=style&index=0&scoped=f87fdfb3&lang.css": [],
   "src/components/ui/FooterLoader.vue": [],
-  "src/components/ui/FooterLoader.vue?vue&type=style&index=0&scoped=24a5c890&lang.css": [],
+  "src/components/ui/FooterLoader.vue?vue&type=style&index=0&scoped=175c68b3&lang.css": [],
   "src/components/ui/ItemCard.vue": [],
   "src/components/ui/ItemCard.vue?vue&type=style&index=0&scoped=3d56e50f&lang.css": [],
   "src/components/ui/RevealOnScroll.vue": [],
-  "src/components/ui/RevealOnScroll.vue?vue&type=style&index=0&scoped=b643d8e7&lang.css": [],
+  "src/components/ui/RevealOnScroll.vue?vue&type=style&index=0&scoped=f6a6121c&lang.css": [],
   "src/components/ui/TagPill.vue": [],
   "src/composables/usePageMeta.js": [],
   "src/composables/useReducedMotion.js": [],
@@ -69,18 +69,19 @@
   "src/content/skills.js": [],
   "src/lib/format.js": [],
   "src/lib/projects.js": [
-    "/assets/ProjectDetailView-BOIHAZY4.js"
+    "/assets/ProjectDetailView-DN6nG5dw.js"
   ],
+  "src/lib/site.js": [],
   "src/main.js": [],
   "src/router/routes.js": [],
   "src/router/scroll-behavior.js": [],
   "src/styles/main.css": [],
   "src/views/HomeView.vue": [],
-  "src/views/HomeView.vue?vue&type=style&index=0&scoped=1a697734&lang.css": [],
+  "src/views/HomeView.vue?vue&type=style&index=0&scoped=7cc1b1cf&lang.css": [],
   "src/views/NotFoundView.vue": [
-    "/assets/NotFoundView-C6D-Ep7A.js"
+    "/assets/NotFoundView-BOpRQlPg.js"
   ],
   "src/views/ProjectDetailView.vue": [
-    "/assets/ProjectDetailView-BOIHAZY4.js"
+    "/assets/ProjectDetailView-DN6nG5dw.js"
   ]
 }

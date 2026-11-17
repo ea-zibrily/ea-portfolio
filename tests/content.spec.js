@@ -63,4 +63,13 @@ describe('Content integrity', () => {
       expect(s.label).toBeTruthy()
     }
   })
+
+  it('ensures public/img contains only optimized webp images', () => {
+    const imgDir = path.resolve('public/img')
+    const files = fs.readdirSync(imgDir)
+    expect(files.length).toBeGreaterThan(0)
+    for (const f of files) {
+      expect(f.endsWith('.webp'), `Found non-webp file in public/img: ${f}`).toBe(true)
+    }
+  })
 })

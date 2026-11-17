@@ -274,31 +274,31 @@ flowchart LR
 
 Details and suggested fixes are in [SYSTEM_DESIGN.md §13](./SYSTEM_DESIGN.md#13-known-issues--tech-debt). Priority: **P1** fix soon · **P2** next pass · **P3** nice to have.
 
-| ID | Issue | Priority |
-|---|---|---|
-| K-01 | ~29 MB of original PNG/JPG files in `public/img/` are deployed, and duplicated in `assets-src/` | P1 |
-| K-02 | Card icon links are nested inside the card link (invalid HTML, confusing for screen readers) | P1 |
-| K-03 | `og:image` / Twitter image use relative paths, so social previews show no image | P1 |
-| K-04 | Two page-title formats (`Ea Portfolio — X` from unhead vs `X — Zibril Yuan Afrianto` from the router guard) | P2 |
-| K-05 | `theme-color` meta still uses the old cosmic hex values | P2 |
-| K-06 | Light-mode muted text on tag / hover backgrounds is under AA (4.18–4.30:1) | P2 |
-| K-07 | Raw Tailwind colors in components (hero gradient and glow, red "Expired" badge, lightbox overlays) | P3 |
-| K-08 | No ESLint/Prettier installed and no CI. `npm run lint` from the docs doesn't exist | P2 |
-| K-09 | YouTube iframe loads immediately on pages with a video (heavy) | P2 |
-| K-10 | Placeholder CV PDF (725 B) still deployed although the feature was dropped | P3 |
-| K-11 | Category filter resets after "Back to portfolio" | P3 |
-| K-12 | Hero typewriter timer is never stopped, so the loops stack up after visiting project pages | P2 |
-| K-13 | `dist/` (85 files) is still committed although it's in `.gitignore` | P1 |
-| K-14 | Skill icons are still hotlinked from 8 third-party sites | P2 |
-| K-15 | Dead code: `ProjectHeader.vue`, `SectionHeader.vue`, `src/assets/logo.png`, unused `@fontsource/poppins` dependency, unused images | P3 |
-| K-16 | Invalid `scroll-mt-var(--nav-h)` class on the hero (harmless) | P3 |
-| K-17 | Decorative footer loader is announced by screen readers (`role="status"`) | P3 |
+| ID | Issue | Priority | Status |
+|---|---|---|---|
+| K-01 | ~29 MB of original PNG/JPG files in `public/img/` are deployed, and duplicated in `assets-src/` | P1 | ✅ Resolved (only WebP in `public/img`, backed by `assets-src`) |
+| K-02 | Card icon links are nested inside the card link (invalid HTML, confusing for screen readers) | P1 | ✅ Resolved (stretched title link + elevated icon links) |
+| K-03 | `og:image` / Twitter image use relative paths, so social previews show no image | P1 | ✅ Resolved (canonical absolute URLs via `site.js`) |
+| K-04 | Two page-title formats (`Ea Portfolio — X` from unhead vs `X — Zibril Yuan Afrianto` from the router guard) | P2 | ✅ Resolved (unhead manages `<title>`, router guard removed) |
+| K-05 | `theme-color` meta still uses the old cosmic hex values | P2 | ✅ Resolved (reads `--bg` token dynamically) |
+| K-06 | Light-mode muted text on tag / hover backgrounds is under AA (4.18–4.30:1) | P2 | ✅ Resolved (darkened to `#6A6965`) |
+| K-07 | Raw Tailwind colors in components (hero gradient and glow, red "Expired" badge, lightbox overlays) | P3 | Open |
+| K-08 | No ESLint/Prettier installed and no CI. `npm run lint` from the docs doesn't exist | P2 | Open |
+| K-09 | YouTube iframe loads immediately on pages with a video (heavy) | P2 | ✅ Resolved (click-to-play poster with `youtube-nocookie.com`) |
+| K-10 | Placeholder CV PDF (725 B) still deployed although the feature was dropped | P3 | ✅ Resolved (deleted) |
+| K-11 | Category filter resets after "Back to portfolio" | P3 | ✅ Resolved (module-level persistent filter) |
+| K-12 | Hero typewriter timer is never stopped, so the loops stack up after visiting project pages | P2 | ✅ Resolved (cleared on unmount, respects reduced motion) |
+| K-13 | `dist/` (85 files) is still committed although it's in `.gitignore` | P1 | ✅ Resolved (untracked from git index) |
+| K-14 | Skill icons are still hotlinked from 8 third-party sites | P2 | Open |
+| K-15 | Dead code: `ProjectHeader.vue`, `SectionHeader.vue`, `src/assets/logo.png`, unused `@fontsource/poppins` dependency, unused images | P3 | ✅ Resolved (removed unused components and dependencies) |
+| K-16 | Invalid `scroll-mt-var(--nav-h)` class on the hero (harmless) | P3 | ✅ Resolved |
+| K-17 | Decorative footer loader is announced by screen readers (`role="status"`) | P3 | ✅ Resolved (`aria-hidden="true"`) |
+
+### Feature to-dos
+- **LinkedIn link on the home page:** ✅ Shipped. Added LinkedIn icon links to the hero (`HeroSection.vue`), desktop navbar (`NavBar.vue`), and Schema.org JSON-LD structured data.
 
 ### Content to-dos (ea)
-- Fill `challenges` / `solutions` for the strongest projects (Little Tree Kingdom, Ghost Pinball, Ghost Breaker, Labirin Alfabet, Skuadron Garuda).
-- `profile.email` / `profile.linkedin` are still `TODO(ea)` placeholders. They're not rendered yet, but they're needed for a contact section and the JSON-LD `sameAs`.
-- About bio still says "3+ years". Check it against the experience timeline (Jan 2022 → now ≈ 4+ years).
-- Experience: "Hybird" typo in the IOTA location. "serialzied" typo in the Little Tree Kingdom contributions.
+- **Key Challenges & Engineering Solutions:** ✅ Shipped for the 5 strongest projects (Little Tree Kingdom, Ghost Pinball, Ghost Breaker, Labirin Alfabet, Skuadron Garuda), highlighting real-world MVP architecture, LiveOps/DevOps & code redeem (Es Teh Indonesia), Unity Addressables, and snapshot save systems.
 
 ## 9. Future (v2.1+)
 

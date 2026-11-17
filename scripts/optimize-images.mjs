@@ -4,29 +4,27 @@ import path from 'node:path'
 import sharp from 'sharp'
 
 const imgDir = path.resolve('public/img')
-const backupDir = path.resolve('assets-src')
+const srcDir = path.resolve('assets-src')
 
-if (!fs.existsSync(backupDir)) {
-  fs.mkdirSync(backupDir, { recursive: true })
+if (!fs.existsSync(imgDir)) {
+  fs.mkdirSync(imgDir, { recursive: true })
 }
 
-const files = fs.readdirSync(imgDir).filter((f) => /\.(png|jpe?g)$/i.test(f))
+if (!fs.existsSync(srcDir)) {
+  fs.mkdirSync(srcDir, { recursive: true })
+}
 
-console.log(`🔍 Found ${files.length} images to optimize...\n`)
+const files = fs.readdirSync(srcDir).filter((f) => /\.(png|jpe?g)$/i.test(f))
+
+console.log(`🔍 Found ${files.length} images to optimize from assets-src...\n`)
 
 let totalOldSize = 0
 let totalNewSize = 0
 
 for (const file of files) {
-  const inputPath = path.join(imgDir, file)
-  const backupPath = path.join(backupDir, file)
+  const inputPath = path.join(srcDir, file)
   const baseName = path.parse(file).name
   const outputPath = path.join(imgDir, `${baseName}.webp`)
-
-  // Backup original to assets-src if not already there
-  if (!fs.existsSync(backupPath)) {
-    fs.copyFileSync(inputPath, backupPath)
-  }
 
   const stat = fs.statSync(inputPath)
   totalOldSize += stat.size
