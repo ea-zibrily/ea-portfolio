@@ -7,6 +7,8 @@ const isVisible = ref(false)
 const { isReducedMotion } = useReducedMotion()
 let observer = null
 let safetyTimer = null
+let rafId1 = null
+let rafId2 = null
 
 onMounted(() => {
   if (isReducedMotion.value || typeof window === 'undefined' || !('IntersectionObserver' in window)) {
@@ -14,11 +16,22 @@ onMounted(() => {
     return
   }
 
-  // Fast-path: if the element is already inside or near the viewport, show immediately
+  // Fast-path: handle elements already in or above the viewport on mount
   if (root.value) {
     const rect = root.value.getBoundingClientRect()
-    if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
+    if (rect.bottom <= -100) {
+      // Already scrolled past above the viewport: show immediately
       isVisible.value = true
+      return
+    }
+    if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
+      // Currently in viewport: wait two animation frames so the browser paints
+      // the initial hidden state first, guaranteeing the CSS reveal transition plays
+      rafId1 = requestAnimationFrame(() => {
+        rafId2 = requestAnimationFrame(() => {
+          isVisible.value = true
+        })
+      })
       return
     }
   }
@@ -57,6 +70,14 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
+  if (rafId1) {
+    cancelAnimationFrame(rafId1)
+    rafId1 = null
+  }
+  if (rafId2) {
+    cancelAnimationFrame(rafId2)
+    rafId2 = null
+  }
   if (safetyTimer) {
     clearTimeout(safetyTimer)
     safetyTimer = null
