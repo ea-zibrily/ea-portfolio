@@ -5,6 +5,7 @@ import SkillsSection from '@/components/sections/SkillsSection.vue'
 import ExperienceSection from '@/components/sections/ExperienceSection.vue'
 import PortfolioSection from '@/components/sections/PortfolioSection.vue'
 import CertificateSection from '@/components/sections/CertificateSection.vue'
+import ContactSection from '@/components/sections/ContactSection.vue'
 import { useScrollSpy } from '@/composables/useScrollSpy.js'
 import { usePageMeta } from '@/composables/usePageMeta.js'
 import { useHead } from '@unhead/vue'
@@ -64,6 +65,7 @@ useHead({
     <ExperienceSection />
     <PortfolioSection />
     <CertificateSection />
+    <ContactSection />
   </div>
 </template>
 

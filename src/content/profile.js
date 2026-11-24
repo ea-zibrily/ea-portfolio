@@ -9,6 +9,6 @@ export default {
   ],
   avatar: '/img/profile-ea.webp',
   github: 'https://github.com/ea-zibrily',
-  email: 'zibrilyuann@gmail.com',
+  email: 'mailto:zibrilyuann@gmail.com',
   linkedin: 'https://www.linkedin.com/in/zibrilyy/'
 }
