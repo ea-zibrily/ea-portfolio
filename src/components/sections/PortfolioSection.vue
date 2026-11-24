@@ -34,7 +34,9 @@ function matchesCategory(project, catId) {
 }
 
 const filteredProjects = computed(() => {
-  return projects.filter(p => matchesCategory(p, activeCategory.value))
+  return projects
+    .filter(p => matchesCategory(p, activeCategory.value))
+    .sort((a, b) => Number(b.period || 0) - Number(a.period || 0))
 })
 
 function getCategoryCount(catId) {
