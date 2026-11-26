@@ -139,6 +139,7 @@ onBeforeUnmount(() => {
 
           <img
             alt="Avatar of Zibril Yuan Afrianto"
+            data-stickman-seat="hero"
             fetchpriority="high"
             width="280"
             height="280"

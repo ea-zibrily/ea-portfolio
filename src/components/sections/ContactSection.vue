@@ -36,6 +36,7 @@ import RevealOnScroll from '@/components/ui/RevealOnScroll.vue'
         <a
           v-if="profile.email && !profile.email.startsWith('TODO')"
           :href="'mailto:' + profile.email"
+          data-stickman-seat="contact"
           aria-label="Send an email to get in touch"
           class="group inline-flex items-center gap-2.5 hover:gap-4 px-7 py-3.5 rounded-full bg-primary text-primary-fg text-sm font-semibold shadow-sm hover:opacity-95 transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
         >

@@ -2,6 +2,7 @@
 import NavBar from '@/components/layout/NavBar.vue'
 import MobileTabBar from '@/components/layout/MobileTabBar.vue'
 import SiteFooter from '@/components/layout/SiteFooter.vue'
+import StickmanClicker from '@/components/ui/StickmanClicker.vue'
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import SiteFooter from '@/components/layout/SiteFooter.vue'
     </main>
     <SiteFooter />
     <MobileTabBar />
+    <StickmanClicker />
   </div>
 </template>
 
